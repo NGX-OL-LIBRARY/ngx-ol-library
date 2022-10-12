@@ -3,7 +3,7 @@ module.exports = {
   theme: 'default',
   title: 'NGX-OL-LIBRARY',
   logoUrl: 'assets/logo-light.svg',
-  repoUrl: 'https://github.com/Jonnytoshen/ngx-ol-library',
+  repoUrl: 'https://github.com/NGX-OL-LIBRARY/ngx-ol-library',
   docsDir: 'docs',
   publicDir: 'public',
   navs: [
@@ -20,7 +20,7 @@ module.exports = {
     },
     {
       title: 'GitHub',
-      path: 'https://github.com/Jonnytoshen/ngx-ol-library',
+      path: 'https://github.com/NGX-OL-LIBRARY/ngx-ol-library',
       isExternal: true
     }
   ],

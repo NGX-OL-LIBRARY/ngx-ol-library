@@ -2,6 +2,11 @@
   "name": "ngx-ol-library",
   "version": "0.0.1",
   "description": "A high-performance, feature-packed Angular map component library based on OpenLayers for all your mapping needs.",
+  "homepage": "https://github.com/NGX-OL-LIBRARY/ngx-ol-library#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NGX-OL-LIBRARY/ngx-ol-library.git"
+  },
   "peerDependencies": {
     "@angular/cdk": "^14.1.0",
     "@angular/common": "^14.1.0",
@@ -11,5 +16,14 @@
   },
   "dependencies": {
     "tslib": "^2.3.0"
-  }
+  },
+  "keywords": [
+    "map",
+    "angular",
+    "ng",
+    "openlayers",
+    "ngx",
+    "ol",
+    "ngx-ol-library"
+  ]
 }
