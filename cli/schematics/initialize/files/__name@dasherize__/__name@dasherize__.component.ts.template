@@ -1,0 +1,22 @@
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  ViewEncapsulation
+} from '@angular/core';
+
+@Component({
+  selector: 'nol-<%= dasherize(name) %>',
+  exportAs: 'nol<%= classify(name) %>',
+  template: `<ng-content></ng-content>`,
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class Nol<%= classify(name) %>Component implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}

@@ -1,0 +1,20 @@
+{
+  "name": "cli",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsc -p tsconfig.schematics.json",
+    "postbuild": "copyfiles schematics/*/schema.json schematics/collection.json schematics/*/files/** schematics/*/files/*/** schematics/*/files/*/*/** ../dist/cli/"
+  },
+  "peerDependencies": {
+    "@angular/common": "^14.1.0",
+    "@angular/core": "^14.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "copyfiles": "file:../../node_modules/copyfiles",
+    "typescript": "file:../../node_modules/typescript"
+  },
+  "schematics": "./schematics/collection.json"
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "SchematicsInitialize",
+  "title": "Initialize Schema",
+  "type": "object",
+  "description": "Initialize a new package by template.",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the package.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the package?"
+    },
+    "path": {
+      "type": "string",
+      "format": "path",
+      "$default": {
+        "$source": "workingDirectory"
+      },
+      "description": "The path at which to create the package, relative to the workspace root.",
+      "visible": false
+    },
+    "project": {
+      "type": "string",
+      "description": "The name of the package.",
+      "$default": {
+        "$source": "projectName"
+      }
+    },
+    "docs": {
+      "type": "boolean",
+      "default": false,
+      "description": "Initialize docs."
+    },
+    "category": {
+      "type": "string",
+      "description": "The category of docs"
+    }
+   },
+   "required": ["name", "project"]
+}

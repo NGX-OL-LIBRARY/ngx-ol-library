@@ -1,0 +1,10 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Nol<%= classify(name) %>Component } from './<%= dasherize(name) %>.component';
+
+@NgModule({
+  declarations: [Nol<%= classify(name) %>Component],
+  exports: [Nol<%= classify(name) %>Component],
+  imports: [CommonModule]
+})
+export class Nol<%= classify(name) %>Module { }

@@ -1,0 +1,15 @@
+{
+  "name": "ngx-ol-library",
+  "version": "0.0.1",
+  "description": "A high-performance, feature-packed Angular map component library based on OpenLayers for all your mapping needs.",
+  "peerDependencies": {
+    "@angular/cdk": "^14.1.0",
+    "@angular/common": "^14.1.0",
+    "@angular/core": "^14.1.0",
+    "rxjs": "~7.5.0",
+    "ol": "^7.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

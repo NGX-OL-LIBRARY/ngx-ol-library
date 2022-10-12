@@ -1,0 +1,10 @@
+{
+  "$schema": "../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "initialize": {
+      "description": "Initialize a new package by template.",
+      "factory": "./initialize",
+      "schema": "./initialize/schema.json"
+    }
+  }
+}
