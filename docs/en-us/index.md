@@ -4,6 +4,7 @@ order: 10
 hero: 
   title: NGX-OL-LIBRARY
   description: A high-performance, feature-packed Angular map component library based on OpenLayers for all your mapping needs.
+  banner: assets/hero-banner.png
   actions: 
     - text: Getting Started
       link: /guides/intro/getting-started
