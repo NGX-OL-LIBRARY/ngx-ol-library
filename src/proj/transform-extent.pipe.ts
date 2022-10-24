@@ -1,18 +1,19 @@
+/**
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/LICENSE
+ */
+
 import { Pipe, PipeTransform } from '@angular/core';
+
 import { Extent } from 'ol/extent';
-import { ProjectionLike } from 'ol/proj';
-import { NolProjService } from './proj.service';
+import { ProjectionLike, transformExtent } from 'ol/proj';
 
 @Pipe({
   name: 'nolTransformExtent',
   pure: true
 })
 export class NolTransformExtentPipe implements PipeTransform {
-
-  constructor(protected proj: NolProjService) {}
-
   transform(value: Extent, source: ProjectionLike, destination: ProjectionLike, stops?: number): Extent {
-    return this.proj.transformExtent(value, source, destination, stops);
+    return transformExtent(value, source, destination, stops);
   }
-
 }

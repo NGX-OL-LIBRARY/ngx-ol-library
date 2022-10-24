@@ -1,18 +1,19 @@
+/**
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/LICENSE
+ */
+
 import { Pipe, PipeTransform } from '@angular/core';
+
 import { Coordinate } from 'ol/coordinate';
-import { Projection, ProjectionLike } from 'ol/proj';
-import { NolProjService } from './proj.service';
+import { Projection, ProjectionLike, transform } from 'ol/proj';
 
 @Pipe({
   name: 'nolTransform',
   pure: true
 })
 export class NolTransformPipe implements PipeTransform {
-
-  constructor(protected proj: NolProjService) {}
-
   transform(value: Coordinate, source: Projection, destination: ProjectionLike): Coordinate {
-    return this.proj.transform(value, source, destination);
+    return transform(value, source, destination);
   }
-
 }
