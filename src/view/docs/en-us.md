@@ -1,7 +1,6 @@
 ---
 category: general
 title: View
-subtitle: 视图
 order: 2
 label: new
 ---

@@ -1,7 +1,7 @@
 ---
 category: others
-title: 覆盖
-subtitle: Overlay
+title: Overlay
+subtitle: 覆盖
 order: 1
 label: new
 ---

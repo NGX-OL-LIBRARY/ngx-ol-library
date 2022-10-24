@@ -1,7 +1,6 @@
 ---
 category: general
 title: Map
-subtitle: 地图
 order: 1
 label: new
 ---

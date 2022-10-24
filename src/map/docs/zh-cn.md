@@ -1,7 +1,7 @@
 ---
 category: general
-title: 地图
-subtitle: Map
+title: Map
+subtitle: 地图
 order: 1
 label: new
 ---

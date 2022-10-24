@@ -1,7 +1,7 @@
 ---
 category: general
-title: 投影
-subtitle: Projection
+title: Projection
+subtitle: 投影
 order: 4
 label: new
 ---

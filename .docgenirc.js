@@ -28,7 +28,7 @@ module.exports = {
     {
       name: 'nol',
       rootDir: './src',
-      include: ['layers', 'sources', 'styles', 'interactions', 'controls', 'others'],
+      include: ['layer', 'source', 'style', 'interaction', 'control'],
       docDir: 'docs',
       categories: [
         {
