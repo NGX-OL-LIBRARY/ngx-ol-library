@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CoordinateService } from './coordinate.service';
+import { NolCoordinateService } from './coordinate.service';
 
 describe('CoordinateService', () => {
-  let service: CoordinateService;
+  let service: NolCoordinateService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CoordinateService);
+    service = TestBed.inject(NolCoordinateService);
   });
 
   it('should be created', () => {

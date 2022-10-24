@@ -1,17 +1,18 @@
+/**
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/LICENSE
+ */
+
 import { Pipe, PipeTransform } from '@angular/core';
-import { Coordinate } from 'ol/coordinate';
-import { NolCoordinateService } from './coordinate.service';
+
+import { Coordinate, toStringXY } from 'ol/coordinate';
 
 @Pipe({
   name: 'nolToStringXY',
   pure: true
 })
 export class NolToStringXYPipe implements PipeTransform {
-
-  constructor(protected coordiante: NolCoordinateService) {}
-
   transform(value: Coordinate, fractionDigits?: number): string {
-    return this.coordiante.toStringXY(value, fractionDigits);
+    return toStringXY(value, fractionDigits);
   }
-
 }

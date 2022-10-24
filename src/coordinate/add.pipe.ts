@@ -1,17 +1,18 @@
+/**
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/LICENSE
+ */
+
 import { Pipe, PipeTransform } from '@angular/core';
-import { Coordinate } from 'ol/coordinate';
-import { NolCoordinateService } from './coordinate.service';
+
+import { add, Coordinate } from 'ol/coordinate';
 
 @Pipe({
   name: 'nolAdd',
   pure: true
 })
 export class NolAddPipe implements PipeTransform {
-
-  constructor(protected coordiante: NolCoordinateService) {}
-
   transform(value: Coordinate, delta: Coordinate): Coordinate {
-    return this.coordiante.add(value, delta);
+    return add(value, delta);
   }
-
 }
