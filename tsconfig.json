@@ -11,8 +11,8 @@
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "paths": {
-      "ngx-ol-library": [
-        "./dist/ngx-ol-library"
+      "ngx-ol-library/*": [
+        "./dist/ngx-ol-library/*"
       ]
     },
     "sourceMap": true,
