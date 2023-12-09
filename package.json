@@ -1,0 +1,82 @@
+{
+  "name": "ngx-ol-library",
+  "version": "0.0.0",
+  "description": "Components for map visualization based on Openlayers",
+  "homepage": "https://github.com/NGX-OL-LIBRARY/ngx-ol-library#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NGX-OL-LIBRARY/ngx-ol-library.git"
+  },
+  "keywords": [
+    "map",
+    "angular",
+    "ng",
+    "openlayers",
+    "ngx",
+    "ol",
+    "ngx-ol-library"
+  ],
+  "scripts": {
+    "ng": "ng",
+    "build:docs": "docgeni build",
+    "start": "ng serve",
+    "build": "ng build",
+    "start:docs": "docgeni serve --port 4600",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "lint": "ng lint",
+    "commit": "git-cz",
+    "prepare": "husky install"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^17.0.0",
+    "@angular/common": "^17.0.0",
+    "@angular/compiler": "^17.0.0",
+    "@angular/core": "^17.0.0",
+    "@angular/forms": "^17.0.0",
+    "@angular/platform-browser": "^17.0.0",
+    "@angular/platform-browser-dynamic": "^17.0.0",
+    "@angular/router": "^17.0.0",
+    "ol": "^8.2.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.0.6",
+    "@angular-eslint/builder": "17.1.1",
+    "@angular-eslint/eslint-plugin": "17.1.1",
+    "@angular-eslint/eslint-plugin-template": "17.1.1",
+    "@angular-eslint/schematics": "17.1.1",
+    "@angular-eslint/template-parser": "17.1.1",
+    "@angular/cli": "^17.0.5",
+    "@angular/compiler-cli": "^17.0.0",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-angular": "^18.4.3",
+    "@commitlint/cz-commitlint": "^18.4.3",
+    "@docgeni/cli": "2.2.2",
+    "@docgeni/template": "2.2.2",
+    "@types/jasmine": "~5.1.0",
+    "@typescript-eslint/eslint-plugin": "6.13.1",
+    "@typescript-eslint/parser": "6.13.1",
+    "@worktile/pkg-manager": "^0.1.0",
+    "commitizen": "^4.3.0",
+    "eslint": "^8.54.0",
+    "husky": "^8.0.3",
+    "inquirer": "^8.0.0",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-packagr": "^17.0.0",
+    "typescript": "~5.2.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  }
+}
