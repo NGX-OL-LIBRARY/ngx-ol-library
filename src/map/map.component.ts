@@ -32,6 +32,11 @@ import LayerGroup from 'ol/layer/Group';
 import RenderEvent from 'ol/render/Event';
 import { NolPrefixedOptions } from 'ngx-ol-library/core';
 
+/**
+ * This is the main container for all other ngx-ol-library components.
+ * @name nol-map
+ * @order 1
+ */
 @Component({
   selector: 'nol-map',
   standalone: true,
