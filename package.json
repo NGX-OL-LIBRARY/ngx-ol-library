@@ -1,6 +1,6 @@
 {
   "name": "ngx-ol-library",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Components for map visualization based on Openlayers",
   "homepage": "https://github.com/NGX-OL-LIBRARY/ngx-ol-library#readme",
   "repository": {
