@@ -20,7 +20,7 @@ module.exports = {
     {
     name: 'ngx-ol-library',
     rootDir: 'src',
-    include: ['./', 'layer', 'source'],
+    include: ['./', 'layer', 'source', 'geom'],
       exclude: [],
       docDir: 'docs',
       apiMode: 'automatic',
@@ -49,6 +49,15 @@ module.exports = {
           locales: {
             'en-us': {
               title: 'Source'
+            }
+          }
+        },
+        {
+          id: 'geom',
+          title: '几何图形',
+          locales: {
+            'en-us': {
+              title: 'Geometry'
             }
           }
         },
