@@ -85,6 +85,7 @@
               "site/src/assets"
             ],
             "styles": [
+              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "node_modules/ol/ol.css",
               "site/src/styles.scss"
             ],

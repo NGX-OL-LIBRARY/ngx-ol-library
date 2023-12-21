@@ -40,6 +40,7 @@
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
     "geojson": "^0.5.0",
+    "ng-zorro-antd": "^17.1.0",
     "ol": "^8.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
