@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
@@ -58,7 +59,7 @@ import { NolPrefixedOptions } from 'ngx-ol-library/core';
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NolMapComponent implements NolPrefixedOptions<MapOptions>, OnInit, OnChanges, OnDestroy {
+export class NolMapComponent implements NolPrefixedOptions<MapOptions>, OnInit, AfterViewInit, OnChanges, OnDestroy {
 
   @Input() nolControls?: Collection<Control> | Control[];
   @Input() nolPixelRatio?: number;
@@ -105,10 +106,6 @@ export class NolMapComponent implements NolPrefixedOptions<MapOptions>, OnInit, 
   }
 
   ngOnInit(): void {
-    if (!this.nolTarget) {
-      this.nolTarget = this.elementRef.nativeElement.firstChild as HTMLElement;
-    }
-
     this.instance = new Map({
       controls: this.nolControls,
       pixelRatio: this.nolPixelRatio,
@@ -118,7 +115,6 @@ export class NolMapComponent implements NolPrefixedOptions<MapOptions>, OnInit, 
       maxTilesLoading: this.nolMaxTilesLoading,
       moveTolerance: this.nolMoveTolerance,
       overlays: this.nolOverlays,
-      target: this.nolTarget,
       view: this.nolView,
     });
 
@@ -245,6 +241,13 @@ export class NolMapComponent implements NolPrefixedOptions<MapOptions>, OnInit, 
       .subscribe(evt => {
         this.nolSingleclick.emit(evt);
       });
+  }
+
+  ngAfterViewInit(): void {
+    if (!this.nolTarget) {
+      this.nolTarget = this.elementRef.nativeElement.firstChild as HTMLElement;
+    }
+    this.instance.setTarget(this.nolTarget);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
