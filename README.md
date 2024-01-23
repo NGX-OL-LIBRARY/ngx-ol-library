@@ -1,27 +1,78 @@
-# NgxOlLibrary
+# ngx-ol-library
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+ngx-ol-library is a components library that brings the high-performance, feature-packed OpenLayers to the World of Angular. 
 
-## Development server
+And makes it easy to put a dynamic map in any Angular application. It can display maps with tiled, raster or vector layers loaded from different sources.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Dependencies
+ngx-ol-library works with the following versions which must be installed as peer dependencies:
+* [ol](https://github.com/openlayers/openlayers): `^8.2.0`
+* [@angular/core](https://github.com/angular/angular): `^17.0.0`
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ensure that you have created a new project with `@angular/cli` and installed the `ol` peer dependency.
 
-## Build
+```bash
+$ npm install ngx-ol-library --save
+# Or if you use yarn
+$ yarn add ngx-ol-library
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Import Styles
 
-## Running unit tests
+Import the OpenLayers pre-built stylesheet in `angular.json`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```diff
+{
+  "styles": [
++    "node_modules/ol/ol.css"
+  ]
+}
+```
 
-## Running end-to-end tests
+## Import Component Module
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Finally, you need to import the component modules that you want to use into the app.module.ts file and [feature modules](https://angular.io/guide/feature-modules).
 
-## Further help
+```ts
+import { NgModule } from '@angular/core';
+import { NolMapModule } from 'ngx-ol-library/map';
+import { NolViewModule } from 'ngx-ol-library/view';
+import { AppComponent } from './app.component';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    NolMapModule,
+    NolViewModule
+  ]
+})
+export class AppModule {}
+```
+
+If you are using standalone components, you can import the `ngx-ol-library` components in the standalone component that needs to display the map.
+
+```ts
+import { Component } from '@angular/core';
+import { NolTileLayerComponent } from 'ngx-ol-library/layer/tile';
+import { NolMapComponent } from 'ngx-ol-library/map';
+import { NolOSMSourceComponent } from 'ngx-ol-library/source/osm';
+import { NolViewComponent } from 'ngx-ol-library/view';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [
+    NolMapComponent,
+    NolViewComponent,
+    NolTileLayerComponent,
+    NolOSMSourceComponent,
+  ],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {}
+```
