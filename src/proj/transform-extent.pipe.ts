@@ -12,7 +12,7 @@ import { ProjectionLike, transformExtent } from 'ol/proj';
   name: 'transformExtent',
   standalone: true
 })
-export class TransformExtentPipe implements PipeTransform {
+export class NolTransformExtentPipe implements PipeTransform {
 
   /**
    * Transforms an extent from source projection to destination projection. 

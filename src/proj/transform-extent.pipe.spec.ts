@@ -1,8 +1,8 @@
-import { TransformExtentPipe } from './transform-extent.pipe';
+import { NolTransformExtentPipe } from './transform-extent.pipe';
 
-describe('TransformExtentPipe', () => {
+describe('NolTransformExtentPipe', () => {
   it('create an instance', () => {
-    const pipe = new TransformExtentPipe();
+    const pipe = new NolTransformExtentPipe();
     expect(pipe).toBeTruthy();
   });
 });

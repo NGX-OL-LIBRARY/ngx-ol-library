@@ -12,7 +12,7 @@ import { ProjectionLike, transform } from 'ol/proj';
   name: 'transform',
   standalone: true
 })
-export class TransformPipe implements PipeTransform {
+export class NolTransformPipe implements PipeTransform {
 
   /**
    * Transforms a coordinate from source projection to destination projection. 
