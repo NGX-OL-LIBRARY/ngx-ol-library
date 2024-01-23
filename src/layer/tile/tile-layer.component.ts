@@ -24,7 +24,7 @@ import TileLayer from 'ol/layer/Tile';
 import RenderEvent from 'ol/render/Event';
 import TileSource from 'ol/source/Tile';
 import { NolPrefixedOptions } from 'ngx-ol-library/core';
-import { injectMap } from 'ngx-ol-library/map';
+import { injectLayerHost } from 'ngx-ol-library/layer/core';
 
 /**
  * For layer sources that provide pre-rendered, tiled images in grids that are 
@@ -75,7 +75,7 @@ export class NolTileLayerComponent implements NolPrefixedOptions<Options<TileSou
 
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
-  private readonly host = injectMap({ host: true });
+  private readonly host = injectLayerHost('nol-tile-layer');
   private instance!: TileLayer<TileSource>;
 
   getInstance() {
@@ -225,7 +225,7 @@ export class NolTileLayerComponent implements NolPrefixedOptions<Options<TileSou
       });
 
 
-    this.host.getInstance().addLayer(this.instance);
+    this.host.addLayer(this.instance);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -301,7 +301,7 @@ export class NolTileLayerComponent implements NolPrefixedOptions<Options<TileSou
   }
 
   ngOnDestroy(): void {
-    this.host.getInstance().removeLayer(this.instance);
+    this.host.removeLayer(this.instance);
   }
 
 }
