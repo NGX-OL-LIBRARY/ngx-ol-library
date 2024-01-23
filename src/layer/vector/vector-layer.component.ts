@@ -30,7 +30,7 @@ import VectorLayer from 'ol/layer/Vector';
 import RenderEvent from 'ol/render/Event';
 import VectorSource from 'ol/source/Vector';
 import { NolPrefixedOptions, NolSafeAny } from 'ngx-ol-library/core';
-import { injectMap } from 'ngx-ol-library/map';
+import { injectLayerHost } from 'ngx-ol-library/layer/core';
 
 /**
  * Vector data is rendered client-side, as vectors.
@@ -83,7 +83,7 @@ export class NolVectorLayerComponent implements NolPrefixedOptions<Options<Vecto
 
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
-  private readonly host = injectMap({ host: true });
+  private readonly host = injectLayerHost('nol-vector-layer');
   private instance!: VectorLayer<VectorSource<Feature<Geometry>>>;
 
   getInstance() {
@@ -221,7 +221,7 @@ export class NolVectorLayerComponent implements NolPrefixedOptions<Options<Vecto
         this.nolSourceready.emit(evt);
       });
 
-    this.host.getInstance().addLayer(this.instance);
+    this.host.addLayer(this.instance);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -292,7 +292,7 @@ export class NolVectorLayerComponent implements NolPrefixedOptions<Options<Vecto
   }
 
   ngOnDestroy(): void {
-    this.host.getInstance().removeLayer(this.instance);
+    this.host.removeLayer(this.instance);
   }
 }
 
