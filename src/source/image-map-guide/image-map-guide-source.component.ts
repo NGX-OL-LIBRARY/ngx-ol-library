@@ -22,7 +22,7 @@ import { ImageSourceEvent } from 'ol/source/Image';
 import BaseEvent from 'ol/events/Event';
 import ImageMapGuide, { Options } from 'ol/source/ImageMapGuide';
 import { NolPrefixedOptions, NolSafeAny } from 'ngx-ol-library/core';
-import { injectImageLayer } from 'ngx-ol-library/layer/image';
+import { useImageSourceHost } from 'ngx-ol-library/source/core';
 
 /**
  * Source component for images from Mapguide servers.
@@ -60,7 +60,7 @@ export class NolImageMapGuideSourceComponent implements NolPrefixedOptions<Optio
 
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
-  private readonly host = injectImageLayer({ host: true });
+  private readonly host = useImageSourceHost('nol-image-map-guide-source');
   private instance!: ImageMapGuide;
 
   getInstance() {
@@ -123,7 +123,7 @@ export class NolImageMapGuideSourceComponent implements NolPrefixedOptions<Optio
         this.nolPropertychange.emit(evt);
       });
 
-    this.host.getInstance().setSource(this.instance);
+    this.host.addSource(this.instance);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -154,7 +154,7 @@ export class NolImageMapGuideSourceComponent implements NolPrefixedOptions<Optio
   }
 
   ngOnDestroy(): void {
-    this.host.getInstance().setSource(null);
+    this.host.removeSource(this.instance);
   }
 
 }
