@@ -24,7 +24,7 @@ import { TileSourceEvent } from 'ol/source/Tile';
 import BaseEvent from 'ol/events/Event';
 import TileJSON, { Config, Options } from 'ol/source/TileJSON';
 import { NolPrefixedOptions, NolSafeAny } from 'ngx-ol-library/core';
-import { injectTileLayer } from 'ngx-ol-library/layer/tile';
+import { useTileSourceHost } from 'ngx-ol-library/source/core';
 
 /**
  * Layer source component for tile data in TileJSON format.
@@ -63,7 +63,7 @@ export class NolTileJSONSourceComponent implements NolPrefixedOptions<Options>, 
 
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
-  private readonly host = injectTileLayer({ host: true });
+  private readonly host = useTileSourceHost('nol-tile-json-source');
   private instance!: TileJSON;
 
   getInstance() {
@@ -127,7 +127,7 @@ export class NolTileJSONSourceComponent implements NolPrefixedOptions<Options>, 
         this.nolTileloadstart.emit(evt);
       });
 
-    this.host.getInstance().setSource(this.instance);
+    this.host.addSource(this.instance);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -158,7 +158,7 @@ export class NolTileJSONSourceComponent implements NolPrefixedOptions<Options>, 
   }
 
   ngOnDestroy(): void {
-    this.host.getInstance().setSource(null);
+    this.host.removeSource(this.instance);
   }
 
 }
