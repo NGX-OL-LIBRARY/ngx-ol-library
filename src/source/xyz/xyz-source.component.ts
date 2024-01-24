@@ -26,7 +26,8 @@ import BaseEvent from 'ol/events/Event';
 import TileGrid from 'ol/tilegrid/TileGrid';
 import XYZ, { Options } from 'ol/source/XYZ';
 import { NolPrefixedOptions, NolSafeAny } from 'ngx-ol-library/core';
-import { injectTileLayer } from 'ngx-ol-library/layer/tile';
+import { useTileSourceHost } from 'ngx-ol-library/source/core';
+
 
 /**
  * Layer source for tile data with URLs in a set XYZ format that are defined in a URL template.
@@ -74,7 +75,7 @@ export class NolXYZSourceComponent implements NolPrefixedOptions<Options>, OnIni
 
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
-  private readonly host = injectTileLayer({ host: true });
+  private readonly host = useTileSourceHost('nol-xyz-source');
   private instance!: XYZ;
 
   getInstance() {
@@ -147,7 +148,7 @@ export class NolXYZSourceComponent implements NolPrefixedOptions<Options>, OnIni
         this.nolTileloadstart.emit(evt);
       });
 
-    this.host.getInstance().setSource(this.instance);
+    this.host.addSource(this.instance);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -188,7 +189,7 @@ export class NolXYZSourceComponent implements NolPrefixedOptions<Options>, OnIni
   }
 
   ngOnDestroy(): void {
-    this.host.getInstance().setSource(null);
+    this.host.removeSource(this.instance);
   }
 }
 
