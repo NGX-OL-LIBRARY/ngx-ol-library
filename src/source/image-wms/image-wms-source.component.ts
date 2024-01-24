@@ -24,7 +24,7 @@ import { ServerType } from 'ol/source/wms';
 import BaseEvent from 'ol/events/Event';
 import ImageWMS, { Options } from 'ol/source/ImageWMS';
 import { NolPrefixedOptions, NolSafeAny } from 'ngx-ol-library/core';
-import { injectImageLayer } from 'ngx-ol-library/layer/image';
+import { useImageSourceHost } from 'ngx-ol-library/source/core';
 
 /**
  * Source component for WMS servers providing single, untiled images.
@@ -61,7 +61,7 @@ export class NolImageWMSSourceComponent implements NolPrefixedOptions<Options>, 
 
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
-  private readonly host = injectImageLayer({ host: true });
+  private readonly host = useImageSourceHost('nol-image-wms-source');
   private instance!: ImageWMS;
 
   getInstance() {
@@ -123,7 +123,7 @@ export class NolImageWMSSourceComponent implements NolPrefixedOptions<Options>, 
         this.nolPropertychange.emit(evt);
       });
 
-    this.host.getInstance().setSource(this.instance);
+    this.host.addSource(this.instance);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -159,7 +159,7 @@ export class NolImageWMSSourceComponent implements NolPrefixedOptions<Options>, 
   }
 
   ngOnDestroy(): void {
-    this.host.getInstance().setSource(null);
+    this.host.removeSource(this.instance);
   }
 
 }
