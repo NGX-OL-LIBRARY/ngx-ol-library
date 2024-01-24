@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.2.0...v0.3.0) (2024-01-24)
+
+
+### ✨ Features | 新功能
+
+* **module:core-source:** add image and tile source host injection ([2050a57](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/2050a57c44e0f2b877f3ccb48409f141349040fe))
+* **module:image-arcgis-rest:** adapt raster resource component ([d0c22c4](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/d0c22c48c8aba5edf74ca71d16cc2c57d8e9632e))
+* **module:image-arcgis-rest:** add image arcgis rest source component ([703fe31](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/703fe312f1d7188577f471ebdd854f1acf60c19b))
+* **module:image-canvas:** add image canvas source component ([39c1255](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/39c125538fc982d9ff196a291a753e302e6896a8))
+* **module:image-layer:** add image layer component ([efd9e01](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/efd9e01e65c7c5bb50b07b4154d29883fde0c9d6))
+* **module:image-map-guide:** adapt raster resource component ([5f4c4ea](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/5f4c4ea2cc05227df44fe6306f8715268c588fd2))
+* **module:image-map-guide:** add MapGuide source component ([c2f76f0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/c2f76f06e085c6e86298e5b3267eee925004217b))
+* **module:image-static:** add image static source component ([e09102b](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/e09102bd24b151b5175dd68e5674fc440815b398))
+* **module:image-wms-source:** adapt raster resource component ([f6cd170](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/f6cd17028f1ffa62c3a5dfc7071a9b32539bd4d2))
+* **module:image-wms-source:** add image wms source component ([15dae50](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/15dae506c230a00401c6801a5954516815be7487))
+* **module:layer-core:** add layer host injection ([3867d27](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/3867d273a831d17e1f397709bcce32c9e845738a))
+* **module:layer-group:** add layer group component ([4d65512](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/4d65512eab70778ce7ae620c9b561bc81c7d95e9))
+* **module:osm-source:** adapt raster resource component ([d7ba05e](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/d7ba05e83d98a2d85d4cdf30fc707c983d38473b))
+* **module:proj:** add coordinate and extent transfrom pipes ([3bb04a3](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/3bb04a3b933611cda6e00fd18ffd7177e7ce85c1))
+* **module:raster-source:** add raster source component ([206a16b](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/206a16bad9d25d09ac332875e631740abd7022f0))
+* **module:tile-json-source:** adapt raster resource component ([d7e24aa](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/d7e24aa31fbd6cf98ac8538382bd6ccee6d0ae0a))
+* **module:tile-json-source:** add tile json source component ([9e33142](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/9e331425528fc4f6036262622f739953730beb1e))
+* **module:tile-layer:** adapt layer groups ([0c05f60](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/0c05f604db9b20c59700c212ce2e3c3b4da908ad))
+* **module:vector-layer:** adapt layer groups ([eb53a91](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/eb53a91945a494cceed3708a1c2b12168eb44af4))
+* **module:xyz-source:** adapt raster resource component ([833bfb1](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/833bfb1455c27f5b7a95185dd57dd63f458599fb))
+
 ## [0.2.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.1.0...v0.2.0) (2024-01-22)
 
 
