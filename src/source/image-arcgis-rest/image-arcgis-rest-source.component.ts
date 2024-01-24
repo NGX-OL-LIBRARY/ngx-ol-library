@@ -23,7 +23,7 @@ import BaseEvent from 'ol/events/Event';
 import ImageArcGISRest, { Options } from 'ol/source/ImageArcGISRest';
 import { AttributionLike } from 'ol/source/Source';
 import { NolPrefixedOptions, NolSafeAny } from 'ngx-ol-library/core';
-import { injectImageLayer } from 'ngx-ol-library/layer/image';
+import { useImageSourceHost } from 'ngx-ol-library/source/core';
 
 /**
  * Source component for data from ArcGIS Rest services.
@@ -59,7 +59,7 @@ export class NolImageArcGISRestSourceComponent implements NolPrefixedOptions<Opt
 
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
-  private readonly host = injectImageLayer({ host: true });
+  private readonly host = useImageSourceHost('nol-image-arcgis-rest-source');
   private instance!: ImageArcGISRest;
 
   getInstance() {
@@ -120,7 +120,7 @@ export class NolImageArcGISRestSourceComponent implements NolPrefixedOptions<Opt
         this.nolPropertychange.emit(evt);
       });
 
-    this.host.getInstance().setSource(this.instance);
+    this.host.addSource(this.instance);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -156,7 +156,7 @@ export class NolImageArcGISRestSourceComponent implements NolPrefixedOptions<Opt
   }
 
   ngOnDestroy(): void {
-    this.host.getInstance().setSource(null);
+    this.host.removeSource(this.instance);
   }
 
 }
