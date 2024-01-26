@@ -24,7 +24,7 @@ import { TileSourceEvent } from 'ol/source/Tile';
 import BaseEvent from 'ol/events/Event';
 import TileJSON, { Config, Options } from 'ol/source/TileJSON';
 import { NolPrefixedOptions, NolSafeAny } from 'ngx-ol-library/core';
-import { useTileSourceHost } from 'ngx-ol-library/source/core';
+import { useTileImageSourceHost } from 'ngx-ol-library/source/core';
 
 /**
  * Layer source component for tile data in TileJSON format.
@@ -63,7 +63,7 @@ export class NolTileJSONSourceComponent implements NolPrefixedOptions<Options>, 
 
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
-  private readonly host = useTileSourceHost('nol-tile-json-source');
+  private readonly host = useTileImageSourceHost('nol-tile-json-source');
   private instance!: TileJSON;
 
   getInstance() {
