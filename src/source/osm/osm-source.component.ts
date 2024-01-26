@@ -23,7 +23,7 @@ import { TileSourceEvent } from 'ol/source/Tile';
 import BaseEvent from 'ol/events/Event';
 import OSM, { Options } from 'ol/source/OSM';
 import { NolPrefixedOptions } from 'ngx-ol-library/core';
-import { useTileSourceHost } from 'ngx-ol-library/source/core';
+import { useTileImageSourceHost } from 'ngx-ol-library/source/core';
 
 /**
  * Layer source component for the OpenStreetMap tile server.
@@ -60,7 +60,7 @@ export class NolOSMSourceComponent implements NolPrefixedOptions<Options>, OnIni
 
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
-  private readonly host = useTileSourceHost('nol-osm-source');
+  private readonly host = useTileImageSourceHost('nol-osm-source');
   private instance!: OSM;
 
   getInstance() {
