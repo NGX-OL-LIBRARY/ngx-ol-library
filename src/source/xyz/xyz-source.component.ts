@@ -26,7 +26,7 @@ import BaseEvent from 'ol/events/Event';
 import TileGrid from 'ol/tilegrid/TileGrid';
 import XYZ, { Options } from 'ol/source/XYZ';
 import { NolPrefixedOptions, NolSafeAny } from 'ngx-ol-library/core';
-import { useTileSourceHost } from 'ngx-ol-library/source/core';
+import { useTileImageSourceHost } from 'ngx-ol-library/source/core';
 
 
 /**
@@ -75,7 +75,7 @@ export class NolXYZSourceComponent implements NolPrefixedOptions<Options>, OnIni
 
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
-  private readonly host = useTileSourceHost('nol-xyz-source');
+  private readonly host = useTileImageSourceHost('nol-xyz-source');
   private instance!: XYZ;
 
   getInstance() {
