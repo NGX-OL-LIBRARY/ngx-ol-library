@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.3.0...v0.4.0) (2024-01-26)
+
+
+### ✨ Features | 新功能
+
+* **module:bing-maps-source:** add bing maps source component ([3abdbc3](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/3abdbc347ff29479c0c16435e20e8de01850447d))
+* **module:iiif-source:** add IIIF source component ([62b2d26](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/62b2d2607a532b0f5eff595745c2150d6877d5f7))
+* **module:ogc-map-tile:** add OGC map tile source component ([1131bdb](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/1131bdb12719045834e40a457f1262bf559a9bb6))
+* **module:osm-source:** adapt webgl tile layer component ([e61a89a](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/e61a89a832e721912f4afb29009ec4da426bff54))
+* **module:source-core:** add tile image source host injection ([29bba89](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/29bba89295866acd090de54f5840b729ca279f61))
+* **module:tile-arcgis-reset:** add tile ArcGIS reset source component ([3b125d0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/3b125d092e353562d2b44d6e7cc41e8fe8166682))
+* **module:tile-json-source:** adapt webgl tile layer component ([029727a](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/029727aed64ce40c301e1d53d40e27806552476d))
+* **module:tile-wms:** add tile wms source component ([2c8687e](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/2c8687eae6bddf8f6ae317df31e24220badf701c))
+* **module:webgl-tile-layer:** add webgl tile layer component ([7a275da](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/7a275da87a37b3150f513761c9e50cea23536b9d))
+* **module:xyz-source:** adapt webgl tile layer component ([35736a5](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/35736a59ef531577dadf88ac16f63cec78d50d33))
+
 ## [0.3.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.2.0...v0.3.0) (2024-01-24)
 
 
