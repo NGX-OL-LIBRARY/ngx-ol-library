@@ -1,7 +1,8 @@
 ---
 category: source
 title: OSM
-order: 1
+name: osm
+order: 17
 label: new
 ---
 
