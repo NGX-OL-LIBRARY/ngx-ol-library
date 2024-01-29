@@ -1,8 +1,8 @@
 ---
 category: source
 title: XYZ
-name: nol-xyz-source
-order: 1
+name: xyz
+order: 15
 label: new
 ---
 
