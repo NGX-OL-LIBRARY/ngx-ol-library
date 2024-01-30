@@ -1,6 +1,7 @@
 ---
 category: source
 title: ImageCanvas
+name: image-canvas
 order: 2
 label: new
 ---
