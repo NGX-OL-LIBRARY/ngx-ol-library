@@ -1,7 +1,8 @@
 ---
 category: source
 title: ImageMapGuide
-order: 1
+name: image-map-guide
+order: 3
 label: new
 ---
 
