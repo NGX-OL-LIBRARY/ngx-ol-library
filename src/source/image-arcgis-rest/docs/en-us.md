@@ -1,6 +1,7 @@
 ---
 category: source
 title: ImageArcGISRest
+name: image-arcgis-reset
 order: 1
 label: new
 ---
