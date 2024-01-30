@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.4.0...v0.5.0) (2024-01-30)
+
+
+### ✨ Features | 新功能
+
+* **module:cartodb:** add CartoDB source component ([ac64333](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/ac6433371423047c6e52618d9f4ea34ed3a3b50e))
+* **module:data-tile:** add DataTile source component ([a082444](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/a082444864458cb20ffa1d61d7f7067d3c0858d2))
+* **module:geotiff:** add GeoTIFF source component ([5672a25](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/5672a25f985e29deac701d9082801150d8b9bab4))
+* **module:overlay:** add overlay component ([511a40f](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/511a40fcf7869a99b4872b03e6966febe7b02eed))
+* **module:source-core:** add data tile source host injection ([bfc5b17](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/bfc5b178518fa773352a57f6d150315af32a71a6))
+* **module:stadia-maps:** add StadiaMaps source component ([b435411](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/b435411dd8401d15bd7e71b8d9f33a5e76c6b4ad))
+* **module:tile-debug:** add TileDebug source component ([041d4bb](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/041d4bb95312e72e416fb3434ba139534912ca4e))
+* **module:utfgrid:** add UTFGrid source component ([881a962](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/881a9625d0f43e9225d8420d224d861061a66d06))
+* **module:wmts:** add WMTS source component ([d9e441f](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/d9e441febbcfb2cbbf162b7615182fa517ffdc85))
+* **module:zoomify:** add Zoomify source component ([fe9e4ae](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/fe9e4ae185d5ee482a11f4847ded07355a09b10f))
+
 ## [0.4.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.3.0...v0.4.0) (2024-01-26)
 
 
