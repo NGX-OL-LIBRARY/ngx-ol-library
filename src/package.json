@@ -20,6 +20,7 @@
   "peerDependencies": {
     "@angular/common": "^17.0.0",
     "@angular/core": "^17.0.0",
+    "@angular/cdk": "^17.0.0",
     "ol": "^8.2.0"
   },
   "dependencies": {
