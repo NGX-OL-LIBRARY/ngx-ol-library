@@ -61,6 +61,15 @@ module.exports = {
             }
           }
         },
+        {
+          id: 'others',
+          title: '其它',
+          locales: {
+            'en-us': {
+              title: 'Others'
+            }
+          },
+        },
       ]
     }
   ]
