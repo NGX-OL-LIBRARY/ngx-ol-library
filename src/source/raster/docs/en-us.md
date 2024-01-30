@@ -1,6 +1,7 @@
 ---
 category: source
 title: Raster
+name: raster
 order: 6
 label: new
 ---
