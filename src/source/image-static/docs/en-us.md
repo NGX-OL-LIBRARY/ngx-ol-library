@@ -1,7 +1,8 @@
 ---
 category: source
 title: Static
-order: 1
+name: static
+order: 4
 label: new
 ---
 
