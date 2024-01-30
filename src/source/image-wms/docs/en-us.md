@@ -1,7 +1,8 @@
 ---
 category: source
 title: ImageWMS
-order: 1
+name: image-wms
+order: 5
 label: new
 ---
 
