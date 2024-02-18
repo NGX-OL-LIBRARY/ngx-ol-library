@@ -1,7 +1,7 @@
 ---
 category: layer
 title: Tile
-order: 1
+order: 3
 label: new
 ---
 
