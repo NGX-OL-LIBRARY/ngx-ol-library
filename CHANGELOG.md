@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.5.0...v0.6.0) (2024-02-18)
+
+
+### ✨ Features | 新功能
+
+* **module:cluster-source:** add cluster source component ([72fbee7](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/72fbee7c91aa9d5f4b67adb1f214ddaa96b9ad34))
+* **module:graticule-layer:** add graticule layer component ([21ab95b](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/21ab95b477790378e442d02851cb7707016a4220))
+* **module:heatmap-layer:** add heatmap layer component ([5709172](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/57091727e72d29f58aa1b883b01038def61e9170))
+* **module:ogc-vector-tile-source:** add OGCVectorTile source component ([a55bdcd](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/a55bdcd5bd16a633cd66d234ae49d2ea82b5cc6d))
+* **module:vector-image-layer:** add VectoImage layer component ([8e56383](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/8e5638363288151bd4fe1ffdb0ca6511bf6ce105))
+* **module:vector-source:** add support for components ([0fb1501](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/0fb1501bdeb0971ef3476aec85d27c504bc32b2b))
+* **module:vector-tile-layer:** add VectorTile layer component ([48a0b24](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/48a0b248c6756f190ccc54fa678c8d660ca8b4d3))
+* **module:vector-tile-source:** add VectorTile source component ([c4c6d4f](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/c4c6d4fcea4d4f69a27f9adbb8e9d850d3378cbe))
+
 ## [0.5.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.4.0...v0.5.0) (2024-01-30)
 
 
