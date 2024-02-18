@@ -1,8 +1,8 @@
 ---
 category: layer
 title: Vector
-name: nol-vector-layer
-order: 1
+name: vector-layer
+order: 8
 label: new
 ---
 
