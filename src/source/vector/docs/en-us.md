@@ -1,8 +1,8 @@
 ---
 category: source
 title: Vector
-name: nol-vector-source
-order: 1
+name: vector-source
+order: 23
 label: new
 ---
 
