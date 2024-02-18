@@ -41,8 +41,10 @@
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
     "geojson": "^0.5.0",
+    "monotone-chain-convex-hull": "^1.1.0",
     "ng-zorro-antd": "^17.1.0",
     "ol": "^8.2.0",
+    "proj4": "^2.10.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
@@ -63,6 +65,7 @@
     "@docgeni/template": "^2.3.0",
     "@types/geojson": "^7946.0.13",
     "@types/jasmine": "~5.1.0",
+    "@types/proj4": "^2.5.5",
     "@typescript-eslint/eslint-plugin": "6.13.1",
     "@typescript-eslint/parser": "6.13.1",
     "commitizen": "^4.3.0",
