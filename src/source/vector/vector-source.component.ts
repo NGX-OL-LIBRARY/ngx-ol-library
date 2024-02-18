@@ -28,7 +28,7 @@ import Collection from 'ol/Collection';
 import FeatureFormat from 'ol/format/Feature';
 import BaseEvent from 'ol/events/Event';
 import { NolPrefixedOptions, NolSafeAny } from 'ngx-ol-library/core';
-import { injectVectorSourceHost } from './utils';
+import { useVectorSourceHost } from './utils';
 
 /**
  * Provides a source of features for `nol-vector-layer` components.
@@ -66,7 +66,7 @@ export class NolVectorSourceComponent implements NolPrefixedOptions<Options>, On
   @Output() nolRemovefeature = new EventEmitter<VectorSourceEvent>();
 
   private readonly destroyRef = inject(DestroyRef);
-  private readonly host = injectVectorSourceHost();
+  private readonly host = useVectorSourceHost();
   private instance!: VectorSource;
 
   getInstance() {
