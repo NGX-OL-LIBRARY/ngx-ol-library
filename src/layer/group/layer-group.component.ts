@@ -23,6 +23,47 @@ import BaseLayer from 'ol/layer/Base';
 import LayerGroup, { Options } from 'ol/layer/Group';
 import { NolPrefixedOptions, NolSafeAny } from 'ngx-ol-library/core';
 import { injectMap } from 'ngx-ol-library/map';
+import { useOverviewMapControl } from 'ngx-ol-library/control/overview-map';
+
+function useLayerGroupHost() {
+  const options: InjectOptions = { host: true, optional: true };
+  const map = injectMap(options);
+  const overviewMap = useOverviewMapControl(options);
+  const layerGroup = injectLayerGroup({ ...options, skipSelf: true });
+
+  let getInstance, addLayer, removeLayer;
+
+  if (layerGroup) {
+    getInstance = () => layerGroup.getInstance();
+    addLayer = (layer: BaseLayer) => {
+      const layers = layerGroup.getInstance().getLayers();
+      return layers.push(layer);
+    }
+    removeLayer = (layer: BaseLayer) => {
+      const layers = layerGroup.getInstance().getLayers();
+      return layers.remove(layer);
+    };
+  } else if (overviewMap) {
+    getInstance = () => overviewMap.getInstance();
+    addLayer = (layer: BaseLayer) =>{
+      return overviewMap.getInstance().getOverviewMap().addLayer(layer);
+    }
+    removeLayer = (layer: BaseLayer) => {
+      return overviewMap.getInstance().getOverviewMap().removeLayer(layer);
+    }
+  } else if (map) {
+    getInstance = () => map.getInstance();
+    addLayer = (layer: BaseLayer) => map.getInstance().addLayer(layer);
+    removeLayer = (layer: BaseLayer) => map.getInstance().removeLayer(layer);
+  } else {
+    throw new Error(
+      '`nol-layer-group` component must be nested within `nol-map`' +
+      ', `nol-overview-map-control` or `nol-layer-group` component.'
+    );
+  }
+
+  return { getInstance, addLayer, removeLayer };
+}
 
 /**
  * A [Collection](https://openlayers.org/en/latest/apidoc/module-ol_Collection-Collection.html) of layers that are handled together.
@@ -63,7 +104,7 @@ export class NolLayerGroupComponent implements NolPrefixedOptions<Options>, OnIn
 
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
-  private readonly host = injectMap({ host: true });
+  private readonly host = useLayerGroupHost();
   private instance!: LayerGroup;
 
   getInstance() {
@@ -174,7 +215,7 @@ export class NolLayerGroupComponent implements NolPrefixedOptions<Options>, OnIn
         this.nolPropertychange.emit(evt);
       });
 
-    this.host.getInstance().addLayer(this.instance);
+    this.host.addLayer(this.instance);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -235,7 +276,7 @@ export class NolLayerGroupComponent implements NolPrefixedOptions<Options>, OnIn
   }
 
   ngOnDestroy(): void {
-    this.host.getInstance().removeLayer(this.instance);
+    this.host.removeLayer(this.instance);
   }
 
 }
