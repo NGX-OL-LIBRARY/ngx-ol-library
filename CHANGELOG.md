@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.6.0...v0.7.0) (2024-02-27)
+
+
+### ✨ Features | 新功能
+
+* **module:attribution-control:** add attribution control component ([0ddc240](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/0ddc240ccf0ea239f7df8c1bd4110e93b62c58cd))
+* **module:drag-rotate-and-zoom:** add DragRotateAndZoom component ([193bb56](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/193bb5628baebe1d8d87a4ad4195629c28363817))
+* **module:full-screen-control:** add FullScreen control component ([efa0bb6](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/efa0bb66e98b9e80494efebd0c0f9e1bd24803d3))
+* **module:layer-core:** support overview map control for layer host ([db16793](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/db16793ca465c43e59fbdfb46c7b2fa367a3dc84))
+* **module:layer-group:** support overview map control ([eac70d7](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/eac70d71f6789b4f886a9c214dd10567d19797b4))
+* **module:mouse-position-control:** add MousePosition control component ([f84776b](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/f84776bf5fd71d799b005248f814bb221418caeb))
+* **module:overview-map-control:** add OverviewMap control component ([6b0c390](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/6b0c390c9ac666c601ace632a4613aa4f956707f))
+* **module:rotate-control:** add rotate control component ([2da1370](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/2da13707b52baaa7144908226006843b78d66957))
+* **module:scale-line-control:** add scale line control component ([4603573](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/4603573577bc4781006d2b04d94a66728b28002c))
+* **module:zoom-control:** add zoom control component ([547f5a3](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/547f5a3adea00cf0bc2a620f6b42715c33674c9f))
+* **module:zoom-slider-control:** add zoom slider control component ([2ff2cab](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/2ff2cabaeef46a913298fb5f47192b4ce7fd1429))
+* **module:zoom-to-extent-control:** add ZoomToExtent control component ([a117a8b](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/a117a8b66a945bffa755be3e2124b69281eb59ae))
+
 ## [0.6.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.5.0...v0.6.0) (2024-02-18)
 
 
