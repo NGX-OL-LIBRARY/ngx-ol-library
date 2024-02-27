@@ -18,9 +18,10 @@ module.exports = {
   ],
   libs: [
     {
-    name: 'ngx-ol-library',
-    rootDir: 'src',
-    include: ['./', 'layer', 'source', 'geom', 'control', 'interaction'],
+      name: 'ngx-ol-library',
+      abbrName: 'nol',
+      rootDir: 'src',
+      include: ['./', 'layer', 'source', 'geom', 'control', 'interaction'],
       exclude: [],
       docDir: 'docs',
       apiMode: 'automatic',
