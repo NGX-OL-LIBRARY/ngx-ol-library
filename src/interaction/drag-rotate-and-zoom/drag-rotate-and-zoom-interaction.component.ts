@@ -50,71 +50,71 @@ export class NolDragRotateAndZoomInteractionComponent
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
   private readonly host = injectMap({ host: true });
-  private instnace!: DragRotateAndZoom;
+  private instance!: DragRotateAndZoom;
 
   getInstance(): DragRotateAndZoom {
-    return this.instnace;
+    return this.instance;
   }
 
   ngOnInit(): void {
-    this.instnace = new DragRotateAndZoom({
+    this.instance = new DragRotateAndZoom({
       condition: this.nolCondition,
       duration: this.nolDuration,
     });
 
     if (this.nolActive) {
-      this.instnace.setActive(this.nolActive);
+      this.instance.setActive(this.nolActive);
     }
 
     if (this.nolProperties) {
-      this.instnace.setProperties(this.nolProperties);
+      this.instance.setProperties(this.nolProperties);
     }
 
-    fromEvent<BaseEvent>(this.instnace, 'change')
+    fromEvent<BaseEvent>(this.instance, 'change')
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(evt => {
         this.nolChange.emit(evt);
       });
       
-    fromEvent<BaseEvent>(this.instnace, 'change:active')
+    fromEvent<BaseEvent>(this.instance, 'change:active')
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(() => {
-        this.nolActive = this.instnace.getActive();
+        this.nolActive = this.instance.getActive();
         this.nolActiveChange.emit(this.nolActive);
         this.cdr.markForCheck();
       });
       
-    fromEvent<BaseEvent>(this.instnace, 'error')
+    fromEvent<BaseEvent>(this.instance, 'error')
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(evt => {
         this.nolError.emit(evt);
       });
       
-    fromEvent<ObjectEvent>(this.instnace, 'propertychange')
+    fromEvent<ObjectEvent>(this.instance, 'propertychange')
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(evt => {
         this.nolPropertychange.emit(evt);
       });
       
-    this.host.getInstance().addInteraction(this.instnace);
+    this.host.getInstance().addInteraction(this.instance);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (!this.instnace) return;
+    if (!this.instance) return;
 
     const { nolActive, nolProperties } = changes;
 
     if (nolActive) {
-      this.instnace.setActive(nolActive.currentValue);
+      this.instance.setActive(nolActive.currentValue);
     }
 
     if (nolProperties) {
-      this.instnace.setProperties(nolProperties.currentValue);
+      this.instance.setProperties(nolProperties.currentValue);
     }
   }
 
   ngOnDestroy(): void {
-    this.host.getInstance().removeInteraction(this.instnace);
+    this.host.getInstance().removeInteraction(this.instance);
   }
 
 }
