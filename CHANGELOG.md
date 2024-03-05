@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.7.0...v0.8.0) (2024-03-05)
+
+
+### ✨ Features | 新功能
+
+* **module:dblclick-drag-zoom:** add DblClickDragZoom component ([5c0fbe5](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/5c0fbe518a719347a3bb0070eaffd3843ad0e9c3))
+* **module:double-click-zoom:** add DoubleClickZoom component ([2c6c101](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/2c6c10180cd25ea69827b64c53d50c0e2807cac4))
+* **module:drag-and-drop:** add DragAndDrop interaction component ([c3df487](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/c3df487f152c1dcf63be9703fddf2feed6aaf564))
+* **module:drag-box:** add DragBox interaction component ([97f18fb](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/97f18fb84a14e35d21f0c6e855eb890907440489))
+* **module:drag-rotate:** add DragRotate interaction component ([98f35c8](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/98f35c8b59bfbec69f7af82f79c3eea624b7b8a8))
+* **module:drag-zoom:** add DragZoom interaction component ([103504a](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/103504a0ddf09dfe37307a762cfb3a46d51e7295))
+* **module:draw:** add draw interaction component ([c79cdc8](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/c79cdc8e5473b43726ca237ee073e77534a4d654))
+* **module:extent-interaction:** add extent interaction component ([e7ab575](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/e7ab5758c2387e8aab3d88a11f3be96dafa9263a))
+* **module:keyboard-pan:** add KeyboardPan interaction component ([a786829](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/a786829283d9a6a0eb38946fb65ae7404dda0adb))
+* **module:keyboard-zoom:** add KeyboardZoom interaction component ([6f637d1](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/6f637d1fbf44ab11298198632f2108e79102a016))
+* **module:link:** add Link interaction component ([c45ea8f](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/c45ea8f0079708c9f51b0e198eb6392bdb0bd415))
+* **module:mouse-wheel-zoom:** add MouseWheelZoom interaction component ([1aec9b7](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/1aec9b7279dd51287c16893f41333285009b5571))
+* **module:pointer:** add pointer interaction component ([6ee9880](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/6ee9880b579deb80350b20bc7e28867ade176cf7))
+* **module:select:** add select interaction component ([e530e75](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/e530e7508464f5ab3f3a9458f403bb91a7222501))
+
 ## [0.7.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.6.0...v0.7.0) (2024-02-27)
 
 
