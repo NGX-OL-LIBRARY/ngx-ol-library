@@ -41,16 +41,7 @@ import { NolPrefixedOptions } from 'ngx-ol-library/core';
 @Component({
   selector: 'nol-map',
   standalone: true,
-  template: `
-    <div
-      [tabIndex]="nolTabIndex"
-      [style.width.%]="100"
-      [style.height.%]="100"
-      [style.position]="'relative'"
-    >
-      <ng-content></ng-content>
-    </div>
-  `,
+  template: `<ng-content></ng-content>`,
   styles: [`
     :host {
       position: relative;
@@ -71,7 +62,7 @@ export class NolMapComponent implements NolPrefixedOptions<MapOptions>, OnInit, 
   @Input() nolOverlays?: Collection<Overlay> | Overlay[];
   @Input() nolTarget?: string | HTMLElement;
   @Input() nolView?: View | Promise<ViewOptions>;
-  @Input() nolTabIndex?: number;
+  @Input() @HostBinding('attr.tabIndex') nolTabIndex?: number;
   @Input() @HostBinding('style.width') nolWidth: string | number = '100%';
   @Input() @HostBinding('style.height') nolHeight: string | number = '100%';
 
@@ -245,7 +236,7 @@ export class NolMapComponent implements NolPrefixedOptions<MapOptions>, OnInit, 
 
   ngAfterViewInit(): void {
     if (!this.nolTarget) {
-      this.nolTarget = this.elementRef.nativeElement.firstChild as HTMLElement;
+      this.nolTarget = this.elementRef.nativeElement as HTMLElement;
     }
     this.instance.setTarget(this.nolTarget);
   }
