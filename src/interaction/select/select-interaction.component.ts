@@ -47,7 +47,7 @@ import { injectMap } from 'ngx-ol-library/map';
 export class NolSelectInteractionComponent
   implements NolPrefixedOptions<Options>, OnInit, OnChanges, OnDestroy {
   
-  @Input() nolActive?: boolean;
+  @Input() nolActive: boolean = true;
   @Input() nolAddCondition?: Condition;
   @Input() nolCondition?: Condition;
   @Input() nolLayers?: Layer<Source, LayerRenderer<NolSafeAny>>[] | ((layer: Layer<Source>) => boolean);
@@ -89,9 +89,7 @@ export class NolSelectInteractionComponent
       hitTolerance: this.nolHitTolerance,
     });
 
-    if (typeof this.nolActive === 'boolean') {
-      this.instance.setActive(this.nolActive);
-    }
+    this.instance.setActive(this.nolActive);
 
     if (this.nolProperties) {
       this.instance.setProperties(this.nolProperties);
