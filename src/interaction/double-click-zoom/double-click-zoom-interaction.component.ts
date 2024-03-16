@@ -36,7 +36,7 @@ import { injectMap } from 'ngx-ol-library/map';
 export class NolDoubleClickZoomInteractionComponent
   implements NolPrefixedOptions<Options>, OnInit, OnChanges, OnDestroy {
 
-  @Input() nolActive?: boolean;
+  @Input() nolActive: boolean = true;
   @Input() nolDuration?: number;
   @Input() nolDelta?: number;
   @Input() nolProperties?: Record<string, NolSafeAny>;
@@ -61,9 +61,7 @@ export class NolDoubleClickZoomInteractionComponent
       delta: this.nolDelta,
     });
 
-    if (typeof this.nolActive === 'boolean') {
-      this.instance.setActive(this.nolActive);
-    }
+    this.instance.setActive(this.nolActive);
 
     if (this.nolProperties) {
       this.instance.setProperties(this.nolProperties);
