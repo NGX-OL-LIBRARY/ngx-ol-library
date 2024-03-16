@@ -39,7 +39,7 @@ import { injectMap } from 'ngx-ol-library/map';
 export class NolDragZoomInteractionComponent
   implements NolPrefixedOptions<Options>, OnInit, OnChanges, OnDestroy {
 
-  @Input() nolActive?: boolean;
+  @Input() nolActive: boolean = true;
   @Input() nolClassName?: string;
   @Input() nolCondition?: Condition;
   @Input() nolDuration?: number;
@@ -74,9 +74,7 @@ export class NolDragZoomInteractionComponent
       minArea: this.nolMinArea,
     });
 
-    if (typeof this.nolActive === 'boolean') {
-      this.instance.setActive(this.nolActive);
-    }
+    this.instance.setActive(this.nolActive);
 
     if (this.nolProperties) {
       this.instance.setProperties(this.nolProperties);
