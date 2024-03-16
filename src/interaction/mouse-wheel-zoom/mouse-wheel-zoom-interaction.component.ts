@@ -38,7 +38,7 @@ import { injectMap } from 'ngx-ol-library/map';
 export class NolMouseWheelZoomInteractionComponent
   implements NolPrefixedOptions<Options>, OnInit, OnChanges, OnDestroy {
 
-  @Input() nolActive?: boolean;
+  @Input() nolActive: boolean = true;
   @Input() nolCondition?: Condition;
   @Input() nolOnFocusOnly?: boolean;
   @Input() nolMaxDelta?: number;
@@ -73,9 +73,7 @@ export class NolMouseWheelZoomInteractionComponent
       constrainResolution: this.nolConstrainResolution,
     });
 
-    if (typeof this.nolActive === 'boolean') {
-      this.instance.setActive(this.nolActive);
-    }
+    this.instance.setActive(this.nolActive);
 
     if (this.nolProperties) {
       this.instance.setProperties(this.nolProperties);
