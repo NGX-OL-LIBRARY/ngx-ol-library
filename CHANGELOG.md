@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.1](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.8.0...v0.8.1) (2024-03-16)
+
+
+### ✨ Features | 新功能
+
+* **showcase:** add accessible map example ([7958061](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/7958061f670c12c9d552e0923d708b25bec45caf))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* **module:dblclick-drag-zoom:** fix not deactivate when nolActive=false ([65b30f6](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/65b30f6d33d816b3b58a198afd770a3d44694ef4))
+* **module:drag-rotate-and-zoom:** fix not deactivate set nolActive=false ([7cc3f37](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/7cc3f371aac96d00e38fceb814080ea13fe3b22d))
+* **module:map:** fix tabIndex is 0 but the nolTabIndex is not set ([3ab684a](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/3ab684aa5a97360da64a53a98af3cb5275f9aa7f))
+
 ## [0.8.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.7.0...v0.8.0) (2024-03-05)
 
 
