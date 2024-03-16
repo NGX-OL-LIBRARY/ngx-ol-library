@@ -38,7 +38,7 @@ import { injectMap } from 'ngx-ol-library/map';
 export class NolPointerInteractionComponent
   implements NolPrefixedOptions<Options>, OnInit, OnChanges, OnDestroy {
 
-  @Input() nolActive?: boolean;
+  @Input() nolActive: boolean = true;
   @Input() nolHandleDownEvent?: ((event: MapBrowserEvent<PointerEvent>) => boolean);
   @Input() nolHandleDragEvent?: ((event: MapBrowserEvent<PointerEvent>) => void);
   @Input() nolHandleEvent?: ((event: MapBrowserEvent<PointerEvent>) => boolean);
@@ -71,9 +71,7 @@ export class NolPointerInteractionComponent
       stopDown: this.nolStopDown,
     });
 
-    if (typeof this.nolActive === 'boolean') {
-      this.instance.setActive(this.nolActive);
-    }
+    this.instance.setActive(this.nolActive);
 
     if (this.nolProperties) {
       this.instance.setProperties(this.nolProperties);
