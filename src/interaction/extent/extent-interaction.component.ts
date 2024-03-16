@@ -40,7 +40,7 @@ import { injectMap } from 'ngx-ol-library/map';
 export class NolExtentInteractionComponent
   implements NolPrefixedOptions<Options>, OnInit, OnChanges, OnDestroy {
 
-  @Input() nolActive?: boolean;
+  @Input() nolActive: boolean = true;
   @Input() nolCondition?: Condition;
   @Input() nolExtent?: Extent;
   @Input() nolBoxStyle?: StyleLike;
@@ -74,9 +74,7 @@ export class NolExtentInteractionComponent
       wrapX: this.nolWrapX,
     });
 
-    if (typeof this.nolActive === 'boolean') {
-      this.instance.setActive(this.nolActive);
-    }
+    this.instance.setActive(this.nolActive);
 
     if (this.nolProperties) {
       this.instance.setProperties(this.nolProperties);
