@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.8.1...v0.9.0) (2024-03-16)
+
+
+### ✨ Features | 新功能
+
+* **module:modify:** add modify interaction component ([a175e68](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/a175e68fb4e7bf8f3908b68332b7c46ab8415d29))
+* **module:pinch-rotate:** add pinch rotate interaction component ([67491f1](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/67491f1a2a69ccf31f30da6b01bdcd137c425bd3))
+* **module:pinch-zoom:** add pinch zoom interaction component ([7bc4d5e](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/7bc4d5e61a8c4a3ff6242ecea6401ab6653630af))
+* **module:snap:** add snap interaction component ([65e3714](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/65e37145f74976c56f931741d01ff943e125e3c9))
+* **module:translate:** add translate interaction component ([d0ab40f](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/d0ab40fdde082749c955a1b650a8df0521e9509d))
+* **showcase:** add tracing example for draw interaction ([829b377](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/829b377c05356fbfcd0256ccf1eb8f2dca2b4447))
+
 ### [0.8.1](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.8.0...v0.8.1) (2024-03-16)
 
 
