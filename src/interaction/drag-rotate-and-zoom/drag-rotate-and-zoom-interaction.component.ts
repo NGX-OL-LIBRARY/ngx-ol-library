@@ -37,7 +37,7 @@ import { injectMap } from 'ngx-ol-library/map';
 export class NolDragRotateAndZoomInteractionComponent
   implements NolPrefixedOptions<Options>, OnInit, OnChanges, OnDestroy {
 
-  @Input() nolActive?: boolean;
+  @Input() nolActive: boolean = true;
   @Input() nolCondition?: Condition;
   @Input() nolDuration?: number;
   @Input() nolProperties?: Record<string, NolSafeAny>;
@@ -62,9 +62,7 @@ export class NolDragRotateAndZoomInteractionComponent
       duration: this.nolDuration,
     });
 
-    if (this.nolActive) {
-      this.instance.setActive(this.nolActive);
-    }
+    this.instance.setActive(this.nolActive);
 
     if (this.nolProperties) {
       this.instance.setProperties(this.nolProperties);
