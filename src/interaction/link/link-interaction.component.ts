@@ -37,7 +37,7 @@ import { injectMap } from 'ngx-ol-library/map';
 export class NolLinkInteractionComponent
   implements NolPrefixedOptions<Options>, OnInit, OnChanges, OnDestroy {
 
-  @Input() nolActive?: boolean;
+  @Input() nolActive: boolean = true;
   @Input() nolAnimate?: boolean | AnimationOptions;
   @Input() nolParams?: Params[];
   @Input() nolReplace?: boolean;
@@ -77,9 +77,7 @@ export class NolLinkInteractionComponent
     
     this.instance = new Link(options);
 
-    if (typeof this.nolActive === 'boolean') {
-      this.instance.setActive(this.nolActive);
-    }
+    this.instance.setActive(this.nolActive);
 
     if (this.nolProperties) {
       this.instance.setProperties(this.nolProperties);
