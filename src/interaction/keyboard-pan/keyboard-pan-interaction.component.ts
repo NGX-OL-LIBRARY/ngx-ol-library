@@ -37,7 +37,7 @@ import { injectMap } from 'ngx-ol-library/map';
 export class NolKeyboardPanInteractionComponent
   implements NolPrefixedOptions<Options>, OnInit, OnChanges, OnDestroy {
   
-  @Input() nolActive?: boolean;
+  @Input() nolActive: boolean = true;
   @Input() nolCondition?: Condition;
   @Input() nolDuration?: number;
   @Input() nolPixelDelta?: number;
@@ -64,9 +64,7 @@ export class NolKeyboardPanInteractionComponent
       pixelDelta: this.nolPixelDelta,
     });
 
-    if (typeof this.nolActive === 'boolean') {
-      this.instance.setActive(this.nolActive);
-    }
+    this.instance.setActive(this.nolActive);
 
     if (this.nolProperties) {
       this.instance.setProperties(this.nolProperties);
