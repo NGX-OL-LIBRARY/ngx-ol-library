@@ -42,7 +42,7 @@ import { injectMap } from 'ngx-ol-library/map';
 export class NolDrawInteractionComponent
   implements NolPrefixedOptions<Options>, OnInit, OnChanges, OnDestroy {
 
-  @Input() nolActive?: boolean;
+  @Input() nolActive: boolean = true;
   @Input() nolType!: GeometryType;
   @Input() nolClickTolerance?: number;
   @Input() nolFeatures?: Collection<Feature<Geometry>>;
@@ -106,9 +106,7 @@ export class NolDrawInteractionComponent
       geometryLayout: this.nolGeometryLayout,
     });
 
-    if (typeof this.nolActive === 'boolean') {
-      this.instance.setActive(this.nolActive);
-    }
+    this.instance.setActive(this.nolActive);
 
     if (this.nolProperties) {
       this.instance.setProperties(this.nolProperties);
