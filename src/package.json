@@ -21,7 +21,7 @@
     "@angular/common": "^18.0.0",
     "@angular/core": "^18.0.0",
     "@angular/cdk": "^18.0.0",
-    "ol": "^8.2.0"
+    "ol": "^9.2.4"
   },
   "dependencies": {
     "tslib": "^2.3.0"

@@ -38,7 +38,7 @@ import { injectLayerHost } from 'ngx-ol-library/layer/core';
   template: `<ng-content></ng-content>`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NolHeatmapLayerComponent implements NolPrefixedOptions<Options>, OnInit, OnChanges, OnDestroy {
+export class NolHeatmapLayerComponent implements NolPrefixedOptions<Options<Feature<Geometry>>>, OnInit, OnChanges, OnDestroy {
 
   @Input() nolClassName?: string;
   @Input() nolOpacity?: number;
@@ -81,7 +81,7 @@ export class NolHeatmapLayerComponent implements NolPrefixedOptions<Options>, On
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
   private readonly host = injectLayerHost('nol-heatmap-layer');
-  private instance!: Heatmap;
+  private instance!: Heatmap<Feature<Geometry>>;
 
   getInstance() {
     return this.instance;

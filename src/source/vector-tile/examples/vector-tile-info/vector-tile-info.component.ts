@@ -3,7 +3,7 @@ import { NolVectorTileLayerModule } from 'ngx-ol-library/layer/vector-tile';
 import { NolMapComponent, NolMapModule } from 'ngx-ol-library/map';
 import { NolVectorTileSourceModule } from 'ngx-ol-library/source/vector-tile';
 import { NolViewModule } from 'ngx-ol-library/view';
-import { MapBrowserEvent } from 'ol';
+import { Feature, MapBrowserEvent } from 'ol';
 import MVT from 'ol/format/MVT';
 
 @Component({
@@ -46,7 +46,7 @@ export class NolVectorTileSourceVectorTileInfoExampleComponent {
 
   @ViewChild(NolMapComponent) readonly map!: NolMapComponent;
 
-  readonly format = new MVT();
+  readonly format = new MVT<typeof Feature>();
   readonly url = 'https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/tile/{z}/{y}/{x}.pbf';
   
   public info?: string;

@@ -40,9 +40,8 @@ import { injectLayerHost } from 'ngx-ol-library/layer/core';
   template: `<ng-content></ng-content>`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NolVectorImageLayerComponent implements 
-  NolPrefixedOptions<Options<VectorSource<Feature<Geometry>>>>,
-  OnInit, OnChanges, OnDestroy {
+export class NolVectorImageLayerComponent 
+  implements NolPrefixedOptions<Options<VectorSource<Feature<Geometry>>>>, OnInit, OnChanges, OnDestroy {
 
   @Input() nolClassName?: string;
   @Input() nolOpacity?: number;
@@ -81,7 +80,7 @@ export class NolVectorImageLayerComponent implements
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
   private readonly host = injectLayerHost('nol-vector-image-layer');
-  private instance!: VectorImageLayer<VectorSource<Feature<Geometry>>>;
+  private instance!: VectorImageLayer<Feature<Geometry>>;
 
   getInstance() {
     return this.instance;

@@ -37,7 +37,8 @@ import { injectVectorLayer } from 'ngx-ol-library/layer/vector';
   template: `<ng-content></ng-content>`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NolClusterSourceComponent implements NolPrefixedOptions<Options>, OnInit, OnChanges, OnDestroy {
+export class NolClusterSourceComponent 
+  implements NolPrefixedOptions<Options<Feature<Geometry>>>, OnInit, OnChanges, OnDestroy {
 
   @Input() nolAttributions?: AttributionLike;
   @Input() nolDistance?: number;
@@ -62,7 +63,7 @@ export class NolClusterSourceComponent implements NolPrefixedOptions<Options>, O
 
   private readonly destroyRef = inject(DestroyRef);
   private readonly host = injectVectorLayer();
-  private instance!: Cluster;
+  private instance!: Cluster<Feature<Geometry>>;
 
   getInstance() {
     return this.instance;

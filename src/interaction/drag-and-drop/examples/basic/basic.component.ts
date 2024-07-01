@@ -121,12 +121,12 @@ export class NolDragAndDropInteractionBasicExampleComponent {
 
   getFormatConstructors(extractStyles: boolean): (FeatureFormat | typeof FeatureFormat)[] {
     return [
-      GPX,
-      GeoJSON,
-      IGC,
+      new GPX(),
+      new GeoJSON(),
+      new IGC(),
       // use constructed format to set options
       new KML({ extractStyles }),
-      TopoJSON,
+      new TopoJSON(),
     ];
   }
 

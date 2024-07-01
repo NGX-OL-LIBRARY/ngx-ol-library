@@ -19,14 +19,13 @@ import { ObjectEvent } from 'ol/Object';
 import { Extent } from 'ol/extent';
 import { Geometry } from 'ol/geom';
 import { BackgroundColor } from 'ol/layer/Base';
-import { Options } from 'ol/layer/BaseVector';
 import { OrderFunction } from 'ol/render';
 import { StyleLike } from 'ol/style/Style';
 import { FlatStyleLike } from 'ol/style/flat';
 import Feature from 'ol/Feature';
 import Map from 'ol/Map';
 import BaseEvent from 'ol/events/Event';
-import VectorLayer from 'ol/layer/Vector';
+import VectorLayer, { Options } from 'ol/layer/Vector';
 import RenderEvent from 'ol/render/Event';
 import VectorSource from 'ol/source/Vector';
 import { NolPrefixedOptions, NolSafeAny } from 'ngx-ol-library/core';
@@ -43,7 +42,7 @@ import { injectLayerHost } from 'ngx-ol-library/layer/core';
   template: `<ng-content></ng-content>`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NolVectorLayerComponent implements NolPrefixedOptions<Options<VectorSource<Feature<Geometry>>>>, OnInit, OnChanges, OnDestroy {
+export class NolVectorLayerComponent implements NolPrefixedOptions<Options<Feature<Geometry>>>, OnInit, OnChanges, OnDestroy {
 
   @Input() nolClassName?: string;
   @Input() nolOpacity?: number;
@@ -84,7 +83,7 @@ export class NolVectorLayerComponent implements NolPrefixedOptions<Options<Vecto
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
   private readonly host = injectLayerHost('nol-vector-layer');
-  private instance!: VectorLayer<VectorSource<Feature<Geometry>>>;
+  private instance!: VectorLayer<Feature<Geometry>>;
 
   getInstance() {
     return this.instance;

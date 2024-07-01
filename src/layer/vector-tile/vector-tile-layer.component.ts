@@ -15,9 +15,10 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { fromEvent } from 'rxjs';
-import { Map } from 'ol';
-import { ObjectEvent } from 'ol/Object';
 import { Extent } from 'ol/extent';
+import { Feature, Map } from 'ol';
+import { Geometry } from 'ol/geom';
+import { ObjectEvent } from 'ol/Object';
 import { BackgroundColor } from 'ol/layer/Base';
 import { OrderFunction } from 'ol/render';
 import { StyleLike } from 'ol/style/Style';
@@ -43,7 +44,7 @@ import { injectLayerHost } from 'ngx-ol-library/layer/core';
   template: `<ng-content></ng-content>`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NolVectorTileLayerComponent implements NolPrefixedOptions<Options>, OnInit, OnChanges, OnDestroy {
+export class NolVectorTileLayerComponent implements NolPrefixedOptions<Options<Feature<Geometry>>>, OnInit, OnChanges, OnDestroy {
 
   @Input() nolClassName?: string;
   @Input() nolOpacity?: number;
@@ -57,11 +58,11 @@ export class NolVectorTileLayerComponent implements NolPrefixedOptions<Options>,
   @Input() nolRenderOrder?: OrderFunction;
   @Input() nolRenderBuffer?: number;
   @Input() nolRenderMode?: VectorTileRenderType;
-  @Input() nolSource?: VectorTile;
+  @Input() nolSource?: VectorTile<Feature<Geometry>>;
   @Input() nolMap?: Map;
   @Input() nolDeclutter?: boolean;
   @Input() nolStyle?: StyleLike | null;
-  @Input() nolBackground?: false | BackgroundColor;
+  @Input() nolBackground?: BackgroundColor;
   @Input() nolUpdateWhileAnimating?: boolean;
   @Input() nolUpdateWhileInteracting?: boolean;
   @Input() nolPreload?: number;
@@ -76,7 +77,7 @@ export class NolVectorTileLayerComponent implements NolPrefixedOptions<Options>,
   @Output() nolMinZoomChange = new EventEmitter<number>();
   @Output() nolOpacityChange = new EventEmitter<number>();
   @Output() nolPreloadChange = new EventEmitter<number>();
-  @Output() nolSourceChange = new EventEmitter<VectorTile | undefined>();
+  @Output() nolSourceChange = new EventEmitter<VectorTile<Feature<Geometry>> | undefined>();
   @Output() nolUseInterimTilesOnErrorChange = new EventEmitter<boolean>();
   @Output() nolVisibleChange = new EventEmitter<boolean>();
   @Output() nolZIndexChange = new EventEmitter<number>();
@@ -89,7 +90,7 @@ export class NolVectorTileLayerComponent implements NolPrefixedOptions<Options>,
   private readonly cdr = inject(ChangeDetectorRef);
   private readonly destroyRef = inject(DestroyRef);
   private readonly host = injectLayerHost('nol-vector-tile-layer');
-  private instance!: VectorTileLayer;
+  private instance!: VectorTileLayer<Feature<Geometry>>;
 
   getInstance() {
     return this.instance;

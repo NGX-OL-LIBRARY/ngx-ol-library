@@ -41,7 +41,7 @@ import { useVectorSourceHost } from './utils';
   template: `<ng-content></ng-content>`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NolVectorSourceComponent implements NolPrefixedOptions<Options>, OnInit, OnChanges, OnDestroy {
+export class NolVectorSourceComponent implements NolPrefixedOptions<Options<Feature<Geometry>>>, OnInit, OnChanges, OnDestroy {
 
   @Input() nolAttributions?: AttributionLike;
   @Input() nolFeatures?: Feature<Geometry>[] | Collection<Feature<Geometry>>;

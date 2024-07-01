@@ -3,6 +3,7 @@ import { NolVectorTileLayerModule } from 'ngx-ol-library/layer/vector-tile';
 import { NolMapModule } from 'ngx-ol-library/map';
 import { NolOGCVectorTileSourceModule } from 'ngx-ol-library/source/ogc-vector-tile';
 import { NolViewModule } from 'ngx-ol-library/view';
+import { Feature } from 'ol';
 import MVT from 'ol/format/MVT';
 import Fill from 'ol/style/Fill';
 import Stroke from 'ol/style/Stroke';
@@ -31,7 +32,7 @@ export class NolOGCVectorTileSourceOGCVectorTilesExampleComponent {
 
   readonly url = 'https://maps.gnosis.earth/ogcapi/collections/NaturalEarth:' +
     'cultural:ne_10m_admin_0_countries/tiles/WebMercatorQuad';
-  readonly format = new MVT();
+  readonly format = new MVT<typeof Feature>();
   readonly style = new Style({
     stroke: new Stroke({
       width: 0.6,

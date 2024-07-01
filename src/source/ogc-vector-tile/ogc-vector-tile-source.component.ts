@@ -14,6 +14,8 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { fromEvent } from 'rxjs';
+import { Feature } from 'ol';
+import { Geometry } from 'ol/geom';
 import { ObjectEvent } from 'ol/Object';
 import { TileSourceEvent } from 'ol/source/Tile';
 import { AttributionLike } from 'ol/source/Source';
@@ -40,7 +42,7 @@ import { useVectorTileLayer } from 'ngx-ol-library/layer/vector-tile';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NolOGCVectorTileSourceComponent 
-  implements NolPrefixedOptions<Options>, OnInit, OnChanges, OnDestroy {
+  implements NolPrefixedOptions<Options<Feature<Geometry>>>, OnInit, OnChanges, OnDestroy {
 
   @Input() nolUrl!: string;
   @Input() nolContext?: Record<string, NolSafeAny>;
@@ -66,7 +68,7 @@ export class NolOGCVectorTileSourceComponent
 
   private readonly destroyRef = inject(DestroyRef);
   private readonly host = useVectorTileLayer();
-  private instance!: OGCVectorTile;
+  private instance!: OGCVectorTile<Feature<Geometry>>;
 
   getInstance() {
     return this.instance;
