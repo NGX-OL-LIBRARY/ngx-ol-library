@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
@@ -12,11 +12,13 @@ import { DOCGENI_SITE_PROVIDERS, RootComponent } from './content/index';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule,
     RouterModule.forRoot([]),
     DocgeniTemplateModule,
   ],
-  providers: [...DOCGENI_SITE_PROVIDERS],
+  providers: [
+    provideHttpClient(withInterceptorsFromDi()),
+    ...DOCGENI_SITE_PROVIDERS
+  ],
   bootstrap: [RootComponent]
 })
 export class AppModule { }
