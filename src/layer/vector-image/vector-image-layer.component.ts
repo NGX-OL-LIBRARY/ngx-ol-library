@@ -21,6 +21,8 @@ import { Extent } from 'ol/extent';
 import { Geometry } from 'ol/geom';
 import { OrderFunction } from 'ol/render';
 import { StyleLike } from 'ol/style/Style';
+import { FlatStyleLike } from 'ol/style/flat';
+import { BackgroundColor } from 'ol/layer/Base';
 import BaseEvent from 'ol/events/Event';
 import VectorImageLayer, { Options } from 'ol/layer/VectorImage';
 import RenderEvent from 'ol/render/Event';
@@ -56,8 +58,9 @@ export class NolVectorImageLayerComponent
   @Input() nolRenderBuffer?: number;
   @Input() nolSource?: VectorSource<Feature<Geometry>>;
   @Input() nolMap?: Map;
-  @Input() nolDeclutter?: boolean;
-  @Input() nolStyle?: StyleLike | null;
+  @Input() nolDeclutter?: string | number | boolean;
+  @Input() nolStyle?: StyleLike | FlatStyleLike | null;
+  @Input() nolBackground?: BackgroundColor;
   @Input() nolImageRatio?: number;
   @Input() nolProperties?: Record<string, NolSafeAny>;
 
