@@ -57,7 +57,7 @@ export class NolVectorLayerComponent implements NolPrefixedOptions<Options<Featu
   @Input() nolRenderBuffer?: number;
   @Input() nolSource?: VectorSource<Feature<Geometry>>;
   @Input() nolMap?: Map;
-  @Input() nolDeclutter?: boolean;
+  @Input() nolDeclutter?: boolean | string | number;
   @Input() nolStyle?: StyleLike | FlatStyleLike | null;
   @Input() nolBackground?: BackgroundColor;
   @Input() nolUpdateWhileAnimating?: boolean;
