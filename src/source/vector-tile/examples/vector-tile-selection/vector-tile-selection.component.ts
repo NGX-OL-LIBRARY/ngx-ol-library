@@ -7,7 +7,7 @@ import { NolMapModule } from 'ngx-ol-library/map';
 import { NolVectorTileSourceModule } from 'ngx-ol-library/source/vector-tile';
 import { NolViewModule } from 'ngx-ol-library/view';
 import { MapBrowserEvent } from 'ol';
-import { FeatureLike } from 'ol/Feature';
+import Feature, { FeatureLike } from 'ol/Feature';
 import MVT from 'ol/format/MVT';
 import Fill from 'ol/style/Fill';
 import Stroke from 'ol/style/Stroke';
@@ -100,7 +100,7 @@ export class NolVectorTileSourceVectorTileSelectionExampleComponent {
   @ViewChild('selectionLayer', { read: NolVectorTileLayerComponent })
   private readonly selectionLayer!: NolVectorTileLayerComponent;
 
-  readonly format = new MVT({ idProperty: 'iso_a3' });
+  readonly format = new MVT<typeof Feature>({ idProperty: 'iso_a3' });
   readonly url = 'https://ahocevar.com/geoserver/gwc/service/tms/1.0.0/' +
     'ne:ne_10m_admin_0_countries@EPSG%3A900913@pbf/{z}/{x}/{-y}.pbf';
 
