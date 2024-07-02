@@ -5,9 +5,13 @@ ngx-ol-library is a components library that brings the high-performance, feature
 And makes it easy to put a dynamic map in any Angular application. It can display maps with tiled, raster or vector layers loaded from different sources.
 
 ## Dependencies
-ngx-ol-library works with the following versions which must be installed as peer dependencies:
-* [ol](https://github.com/openlayers/openlayers): `^8.2.0`
-* [@angular/core](https://github.com/angular/angular): `^17.0.0`
+ngx-ol-library works with the following versions which must be installed as peer dependencies: 
+
+| ngx-ol-library | Angular        | Openlayers     |
+|----------------|----------------|----------------|
+| 1.0.x          | ^18.0.0        | ^9.2.4         |
+| 0.x            | ^17.0.0        | ^8.2.0         |
+
 
 ## Installation
 
