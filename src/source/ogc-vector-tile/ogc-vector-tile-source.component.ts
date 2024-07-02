@@ -57,6 +57,7 @@ export class NolOGCVectorTileSourceComponent
   @Input() nolTransition?: number;
   @Input() nolWrapX?: boolean;
   @Input() nolZDirection?: number | NearestDirectionFunction;
+  @Input() nolCollections?: string[];
   @Input() nolProperties?: Record<string, NolSafeAny>;
 
   @Output() nolChange = new EventEmitter<BaseEvent>();
@@ -89,6 +90,7 @@ export class NolOGCVectorTileSourceComponent
       transition: this.nolTransition,
       wrapX: this.nolWrapX,
       zDirection: this.nolZDirection,
+      collections: this.nolCollections,
     });
 
     if (this.nolProperties) {
