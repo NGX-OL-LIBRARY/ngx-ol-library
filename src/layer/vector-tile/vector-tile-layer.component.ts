@@ -60,7 +60,7 @@ export class NolVectorTileLayerComponent implements NolPrefixedOptions<Options<F
   @Input() nolRenderMode?: VectorTileRenderType;
   @Input() nolSource?: VectorTile<Feature<Geometry>>;
   @Input() nolMap?: Map;
-  @Input() nolDeclutter?: boolean;
+  @Input() nolDeclutter?: boolean | string | number;
   @Input() nolStyle?: StyleLike | null;
   @Input() nolBackground?: BackgroundColor;
   @Input() nolUpdateWhileAnimating?: boolean;
