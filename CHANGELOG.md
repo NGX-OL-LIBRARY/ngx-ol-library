@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.9.0...v1.0.0) (2024-07-04)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* **module:vector-image-layer:** fix component properties types ([ee5fe4e](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/ee5fe4e483dd6045bdcdd0c54a7c48d8156ebf7e))
+* **module:vector-layer:** fix declutter property types ([ed9f76c](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/ed9f76cb7b7f184d421aa2c4ed82805162bc3b56))
+* **module:vector-tile-layer:** fix declutter property types ([ced66b3](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/ced66b343e3ac85d1e2a2eff376ce40ada97858f))
+* **showcase:** fix wrong type of mvt format ([341ccdf](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/341ccdf3367c3a23160fddf12500487920ea51e6))
+
+
+### ✨ Features | 新功能
+
+* **module:fill-style:** add fill style component ([5567f96](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/5567f968b5b489774ee3df2ba84dcbedc2832f76))
+* **module:google-source:** add google source component ([db47b6b](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/db47b6bfc87d944487e670f5a4c38fb45049c8af))
+* **module:icon-style:** add icon style component ([9b1a8ea](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/9b1a8ea6a45af5becb318abc7611e196aeefe5cc))
+* **module:ogc-vector-tile-source:** add collections option ([96f9a76](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/96f9a767cf3c7f1221da8237af2520c3f23974c9))
+* **module:regular-shape-style:** add regular shape style component ([a83a282](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/a83a2825ba6b421a43c2d5706a28422a3574d67f))
+* **module:stroke-style:** add stroke style component ([452d9b9](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/452d9b943bfa59855efaaa5284c6a5bf241ba927))
+* **module:style:** add style component ([89d5001](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/89d500111c3f79659a765bda6820f76811731a12))
+
 ## [0.9.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.8.1...v0.9.0) (2024-03-16)
 
 
