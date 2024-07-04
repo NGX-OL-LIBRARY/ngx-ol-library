@@ -20,8 +20,16 @@ module.exports = {
     {
       name: 'ngx-ol-library',
       abbrName: 'nol',
-      rootDir: 'src',
-      include: ['./', 'layer', 'source', 'geom', 'control', 'interaction'],
+      rootDir: './src',
+      include: [
+        './',
+        'control',
+        'geom',
+        'interaction',
+        'layer',
+        'source',
+        'style',
+      ],
       exclude: [],
       docDir: 'docs',
       apiMode: 'automatic',
@@ -68,6 +76,15 @@ module.exports = {
           locales: {
             'en-us': {
               title: 'Source'
+            }
+          }
+        },
+        {
+          id: 'style',
+          title: '风格',
+          locales: {
+            'en-us': {
+              title: 'Style'
             }
           }
         },
