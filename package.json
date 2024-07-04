@@ -87,5 +87,6 @@
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
     }
-  }
+  },
+  "packageManager": "yarn@4.3.1"
 }
