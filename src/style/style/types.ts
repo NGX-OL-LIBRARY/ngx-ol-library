@@ -1,0 +1,1 @@
+export type UpdateHostStyleMode = 'init' | 'destroy' | 'update';
