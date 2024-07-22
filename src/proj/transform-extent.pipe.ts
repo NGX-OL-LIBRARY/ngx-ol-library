@@ -5,11 +5,11 @@ import { ProjectionLike, transformExtent } from 'ol/proj';
 /**
  * Transforms an extent from source projection to destination projection. 
  * This returns a new extent (and does not modify the original).
- * @name transformExtent
+ * @name nolTransformExtent
  * @order 4
  */
 @Pipe({
-  name: 'transformExtent',
+  name: 'nolTransformExtent',
   standalone: true
 })
 export class NolTransformExtentPipe implements PipeTransform {

@@ -4,11 +4,11 @@ import { ProjectionLike, fromLonLat } from 'ol/proj';
 
 /**
  * Transforms a coordinate from longitude/latitude to a different projection.
- * @name fromLonLat
+ * @name nolFromLonLat
  * @order 1
  */
 @Pipe({
-  name: 'fromLonLat',
+  name: 'nolFromLonLat',
   standalone: true
 })
 export class NolFromLonLatPipe implements PipeTransform {

@@ -5,11 +5,11 @@ import { ProjectionLike, transform } from 'ol/proj';
 /**
  * Transforms a coordinate from source projection to destination projection. 
  * This returns a new coordinate (and does not modify the original).
- * @name transform
+ * @name nolTransform
  * @order 3
  */
 @Pipe({
-  name: 'transform',
+  name: 'nolTransform',
   standalone: true
 })
 export class NolTransformPipe implements PipeTransform {
