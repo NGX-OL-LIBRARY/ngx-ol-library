@@ -44,7 +44,7 @@ import { Coordinate } from 'ol/coordinate';
             <button class="popup-closer" (click)="closePopup()">✖</button>
             <div class="popup-content" nz-typography>
               <p>You clicked here:</p>
-              <code>{{ coordinate | toLonLat }}</code>
+              <code>{{ coordinate | nolToLonLat }}</code>
             </div>
           </div>
         </nol-overlay>

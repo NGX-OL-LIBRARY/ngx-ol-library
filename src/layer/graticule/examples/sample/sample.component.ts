@@ -20,7 +20,7 @@ import Stroke from 'ol/style/Stroke';
   ],
   template: `
     <nol-map [nolHeight]="'400px'">
-      <nol-view [nolCenter]="[4.8, 47.75] | fromLonLat" [nolZoom]="5" />
+      <nol-view [nolCenter]="[4.8, 47.75] | nolFromLonLat" [nolZoom]="5" />
       <nol-tile-layer>
         <nol-osm-source [nolWrapX]="false" />
       </nol-tile-layer>

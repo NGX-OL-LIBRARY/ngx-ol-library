@@ -17,7 +17,7 @@ import { NolViewModule } from 'ngx-ol-library/view';
   ],
   template: `
     <nol-map [nolHeight]="'400px'">
-      <nol-view [nolCenter]="[-122.416667, 37.783333] | fromLonLat" [nolZoom]="12" />
+      <nol-view [nolCenter]="[-122.416667, 37.783333] | nolFromLonLat" [nolZoom]="12" />
       <nol-tile-layer>
         <nol-stadia-maps-source [nolLayer]="'stamen_watercolor'" />
       </nol-tile-layer>

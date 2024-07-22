@@ -31,7 +31,7 @@ import { NolViewModule } from 'ngx-ol-library/view';
   ],
   template: `
     <nol-map [nolHeight]="'400px'">
-      <nol-view [nolCenter]="[37.4057, 8.81566] | fromLonLat" [nolZoom]="4"></nol-view>
+      <nol-view [nolCenter]="[37.4057, 8.81566] | nolFromLonLat" [nolZoom]="4"></nol-view>
       <nol-tile-layer [nolVisible]="osmLayerVisible" [nolOpacity]="osmLayerOpacity">
         <nol-osm-source></nol-osm-source>
       </nol-tile-layer>

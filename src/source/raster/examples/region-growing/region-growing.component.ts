@@ -32,7 +32,7 @@ import { Operation, RasterSourceEvent } from 'ol/source/Raster';
   ],
   template: `
     <nol-map [nolHeight]="'400px'" (nolClick)="onClickMap($event)">
-      <nol-view [nolCenter]="[-119.07, 47.65] | fromLonLat" [nolZoom]="11" />
+      <nol-view [nolCenter]="[-119.07, 47.65] | nolFromLonLat" [nolZoom]="11" />
       <nol-tile-layer #imagery>
         <nol-xyz-source 
           [nolAttributions]="attributions"

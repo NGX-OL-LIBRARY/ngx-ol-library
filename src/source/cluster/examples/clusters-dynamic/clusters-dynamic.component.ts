@@ -128,7 +128,7 @@ function generatePointsCircle(count: number, clusterCenter: Coordinate, resoluti
         [nolCenter]="[0, 0]"
         [nolZoom]="2"
         [nolMaxZoom]="19"
-        [nolExtent]="[16.1793, 48.1124, 16.5559, 48.313] | transformExtent: 'EPSG:4326': 'EPSG:3857'"
+        [nolExtent]="[16.1793, 48.1124, 16.5559, 48.313] | nolTransformExtent: 'EPSG:4326': 'EPSG:3857'"
         [nolShowFullExtent]="true"
       />
       <nol-tile-layer>

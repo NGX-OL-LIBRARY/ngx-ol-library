@@ -24,7 +24,7 @@ import GeoJSON from 'ol/format/GeoJSON';
   ],
   template: `
     <nol-map [nolHeight]="'400px'">
-      <nol-view [nolCenter]="[-100, 38.5] | fromLonLat" [nolZoom]="4" />
+      <nol-view [nolCenter]="[-100, 38.5] | nolFromLonLat" [nolZoom]="4" />
       <nol-vector-layer [nolBackground]="'white'">
         <nol-vector-source
           [nolUrl]="'https://openlayers.org/data/vector/us-states.json'"

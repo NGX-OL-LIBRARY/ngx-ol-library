@@ -29,7 +29,7 @@ import { NolViewModule } from 'ngx-ol-library/view';
   ],
   template: `
     <nol-map [nolHeight]="'400px'">
-      <nol-view [nolCenter]="[2.896372, 44.6024] | fromLonLat" [nolZoom]="3" />
+      <nol-view [nolCenter]="[2.896372, 44.6024] | nolFromLonLat" [nolZoom]="3" />
       <nol-tile-layer>
         <nol-ogc-map-tile-source 
           [nolUrl]="'https://maps.gnosis.earth/ogcapi/collections/NaturalEarth:raster:HYP_HR_SR_OB_DR/map/tiles/WebMercatorQuad'"
@@ -39,7 +39,7 @@ import { NolViewModule } from 'ngx-ol-library/view';
       <nol-vector-layer>
         <nol-vector-source>
           <nol-feature>
-            <nol-point-geometry [nolCoordinates]="[12.5, 41.9] | fromLonLat" />
+            <nol-point-geometry [nolCoordinates]="[12.5, 41.9] | nolFromLonLat" />
             <nol-style>
               <nol-icon-style 
                 [nolColor]="'#BADA55'"
@@ -49,7 +49,7 @@ import { NolViewModule } from 'ngx-ol-library/view';
             </nol-style>
           </nol-feature>
           <nol-feature>
-            <nol-point-geometry [nolCoordinates]="[-0.12755, 51.507222] | fromLonLat" />
+            <nol-point-geometry [nolCoordinates]="[-0.12755, 51.507222] | nolFromLonLat" />
             <nol-style>
               <nol-icon-style 
                 [nolColor]="'rgba(255, 0, 0, .5)'"
@@ -60,7 +60,7 @@ import { NolViewModule } from 'ngx-ol-library/view';
             </nol-style>
           </nol-feature>
           <nol-feature>
-            <nol-point-geometry [nolCoordinates]="[-3.683333, 40.4] | fromLonLat" />
+            <nol-point-geometry [nolCoordinates]="[-3.683333, 40.4] | nolFromLonLat" />
             <nol-style>
               <nol-icon-style 
                 [nolCrossOrigin]="'crossOrigin'"
@@ -70,7 +70,7 @@ import { NolViewModule } from 'ngx-ol-library/view';
             </nol-style>
           </nol-feature>
           <nol-feature>
-            <nol-point-geometry [nolCoordinates]="[2.353, 48.8566] | fromLonLat" />
+            <nol-point-geometry [nolCoordinates]="[2.353, 48.8566] | nolFromLonLat" />
             <nol-style>
               <nol-icon-style 
                 [nolColor]="'#8959A8'"
@@ -80,7 +80,7 @@ import { NolViewModule } from 'ngx-ol-library/view';
             </nol-style>
           </nol-feature>
           <nol-feature>
-            <nol-point-geometry [nolCoordinates]="[13.3884, 52.5169] | fromLonLat" />
+            <nol-point-geometry [nolCoordinates]="[13.3884, 52.5169] | nolFromLonLat" />
             <nol-style>
               <nol-icon-style 
                 [nolCrossOrigin]="'crossOrigin'"

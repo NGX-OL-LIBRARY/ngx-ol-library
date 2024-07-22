@@ -38,21 +38,21 @@ import { Coordinate } from 'ol/coordinate';
             <div class="popover-header">Welcome to OpenLayers</div>
             <div class="popover-body" nz-typography>
               <p>The location you clicked was:</p>
-              <code>{{ coordinate | toLonLat }}</code>
+              <code>{{ coordinate | nolToLonLat }}</code>
             </div>
           </div>
         </nol-overlay>
       }
       <!-- Vienna marker -->
       <nol-overlay
-        [nolPosition]="[16.3725, 48.208889] | fromLonLat"
+        [nolPosition]="[16.3725, 48.208889] | nolFromLonLat"
         [nolPositioning]="'center-center'"
         [nolStopEvent]="false"
       >
         <div class="marker"></div>
       </nol-overlay>
       <!-- Vienna label -->
-      <nol-overlay [nolPosition]="[16.3725, 48.208889] | fromLonLat">
+      <nol-overlay [nolPosition]="[16.3725, 48.208889] | nolFromLonLat">
         <a 
           class="vienna" 
           href="https://en.wikipedia.org/wiki/Vienna"
