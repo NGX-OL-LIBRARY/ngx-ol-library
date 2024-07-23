@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v1.0.0...v1.1.0) (2024-07-23)
+
+
+### ✨ Features | 新功能
+
+* **module:circle-style:** add circle style component ([19f863a](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/19f863a11212117800ae00616b954096d4efcdce))
+* **module:coordinate:** add coordinate module ([e43bb74](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/e43bb746c6b8d1cb3c8b809c67ec38b9c89fd9c8))
+* **module:fill-style:** fill and background fill for text style ([e7ed167](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/e7ed1673cdb7b07ea827a11b7399f3428cabeb2d))
+* **module:fill-style:** fill for circle style ([9a382fd](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/9a382fde2ac805737509a1b4c5c5cbc2672947d0))
+* **module:proj:** add nol prefix to pipes name of proj ([a7da9e7](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/a7da9e72d93fd24daa39ded238592580a389f6f8))
+* **module:stroke-style:** stroke and background stroke for circle style ([d067a12](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/d067a12fe0c780f011017626d7d6851ad38269ea))
+* **module:stroke-style:** stroke for circle style ([eafea50](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/eafea5065eb823168c41e00c937b4f9410972b80))
+* **module:text-style:** add text style component ([5c8635a](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/5c8635a29ffa9eb3257dafacf32469d53e14496a))
+* **showcase:** use pipe names prefixed with nol ([de67bca](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/commit/de67bca3d361859a638b83e6e4d55e56aa7e0ce9))
+
 ## [1.0.0](https://github.com/NGX-OL-LIBRARY/ngx-ol-library/compare/v0.9.0...v1.0.0) (2024-07-04)
 
 
