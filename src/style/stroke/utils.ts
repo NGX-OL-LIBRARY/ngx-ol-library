@@ -2,12 +2,15 @@ import { InjectOptions } from '@angular/core';
 import { useCircleStyle } from 'ngx-ol-library/style/circle';
 import { useRegularShapeStyle } from 'ngx-ol-library/style/regular-shape';
 import { useStyle } from 'ngx-ol-library/style/style';
+import { useTextBackgroundStroke, useTextStyle } from 'ngx-ol-library/style/text';
 import { Stroke } from 'ol/style';
 
 export function useStrokeStyleHost() {
   const injectOptions: InjectOptions = { host: true, optional: true };
-  const host = useCircleStyle() ||
-    useRegularShapeStyle() ||
+  const host = useTextBackgroundStroke(injectOptions) ||
+    useTextStyle(injectOptions) ||
+    useCircleStyle(injectOptions) ||
+    useRegularShapeStyle(injectOptions) ||
     useStyle(injectOptions);
 
   if (!host) {
